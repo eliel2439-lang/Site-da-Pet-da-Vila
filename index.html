@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pet da Vila – Banho e Tosa em São Paulo | Vila dos Remédios</title>
+<meta name="description" content="Pet da Vila: banho e tosa profissional para cães e gatos, táxi dog em São Paulo, Vila dos Remédios. Desde 2014. (11) 96362-3660."/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --or:#FF8C00;--or2:#FFA733;--or3:#CC6E00;
+  --re:#CC0000;--re2:#990000;
+  --bk:#111;--dk:#1A1A1A;--dk2:#242424;
+  --wh:#fff;--gy:#F7F7F7;--gy2:#EFEFEF;--gy3:#E0E0E0;
+  --tx:#1A1A1A;--tx2:#555;--tx3:#999;
+  --sh:0 4px 24px rgba(0,0,0,.09);
+  --sho:0 6px 28px rgba(255,140,0,.22);
+  --r:16px;--rs:10px;
+  --tr:all .28s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Nunito',sans-serif;color:var(--tx);background:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--or);border-radius:3px;}
+
+/* NAV - PADRÃO TRANSPARENTE NO TOPO */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;align-items:center;padding:0 24px;background:transparent;border-bottom:1px solid rgba(255,255,255,.1);transition:var(--tr);}
+.nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;margin-right:auto;}
+.nav-logo-dot{width:38px;height:38px;background:var(--or);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;border:2px solid var(--re);overflow:hidden;}
+.nav-logo-txt{font-family:'Bebas Neue',cursive;font-size:20px;color:#fff;letter-spacing:2px;transition:var(--tr);}
+.nav-links{display:flex;align-items:center;gap:2px;}
+.nav-btn{color:rgba(255,255,255,0.72);font-weight:700;font-size:14px;padding:7px 13px;border-radius:8px;transition:var(--tr);cursor:pointer;background:none;border:none;font-family:'Nunito',sans-serif;}
+.nav-btn:hover,.nav-btn.active{color:var(--or);background:rgba(255,140,0,.14);}
+.nav-cta{display:flex;align-items:center;gap:6px;background:var(--or);color:#fff;font-weight:800;font-size:13px;padding:9px 20px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;margin-left:8px;transition:var(--tr);box-shadow:0 4px 12px rgba(255,140,0,0.3);}
+.nav-cta:hover{background:var(--re);transform:translateY(-2px);}
+.hb{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;margin-left:12px;z-index:1010;transition:var(--tr);}
+
+/* NAV - ESTADO COM ROLAGEM (RODAPÉ EM BRANCO ATIVADO) */
+.nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--gy3);box-shadow:0 2px 14px rgba(0,0,0,.06);}
+.nav.scrolled .nav-logo-txt{color:var(--bk);}
+.nav.scrolled .nav-btn{color:var(--tx2);}
+.nav.scrolled .nav-btn:hover,.nav.scrolled .nav-btn.active{color:var(--or);background:rgba(255,140,0,.08);}
+.nav.scrolled .hb{color:var(--bk);}
+
+/* PAGES */
+.pg{display:none;}
+.pg.active{display:block;}
+
+/* BTNs */
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);box-shadow:0 4px 18px rgba(255,140,0,.35);}
+.bp:hover{background:var(--re);transform:translateY(-2px);}
+.bp.lg{font-size:17px;padding:16px 38px;}
+.bs{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);color:#fff;font-weight:700;font-size:15px;padding:13px 28px;border-radius:50px;border:2px solid rgba(255,255,255,.6);cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);}
+.bs:hover{background:rgba(255,255,255,.25);}
+.bw{display:inline-flex;align-items:center;gap:7px;background:var(--or);color:#fff;font-weight:800;font-size:13px;padding:10px 20px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);}
+.bw:hover{background:var(--re);transform:translateY(-2px);}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--bk);position:relative;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,#2d1200 0%,#0d0d0d 100%);z-index:1;}
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,0,.15),transparent 70%);top:-80px;right:-80px;pointer-events:none;z-index:2;}
+.paws-c{position:absolute;inset:0;pointer-events:none;z-index:2;}
+.paw-p{position:absolute;opacity:0;animation:fpaw linear infinite;}
+@keyframes fpaw{0%{transform:translateY(100vh) rotate(0deg);opacity:0;}10%{opacity:.28;}90%{opacity:.28;}100%{transform:translateY(-80px) rotate(360deg);opacity:0;}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.65));z-index:2;}
+.hero-cnt{position:relative;z-index:3;max-width:1200px;width:100%;margin:0 auto;padding:110px 24px 60px;text-align:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,140,0,.18);border:1px solid rgba(255,140,0,.45);color:var(--or2);font-size:12px;font-weight:700;padding:6px 18px;border-radius:50px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px;}
+.hero-h1{font-family:'Bebas Neue',cursive;font-size:clamp(52px,9.5vw,108px);color:#fff;line-height:.9;margin-bottom:16px;letter-spacing:2px;}
+.hero-hl{color:var(--or);display:block;}
+.hero-sub{color:rgba(255,255,255,.72);font-size:17px;line-height:1.65;margin-bottom:34px;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.scroll-h{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.4);font-size:11px;text-align:center;}
+.scroll-a{font-size:18px;color:var(--or);animation:bob 2s ease-in-out infinite;display:block;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
+
+/* SECTIONS */
+.sec{padding:80px 24px;}
+.sec-gy{background:var(--gy);}
+.sec-dk{background:var(--dk);}
+.cnt{max-width:1200px;margin:0 auto;}
+.eye{display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:9px;}
+.h2{font-family:'Bebas Neue',cursive;font-size:clamp(34px,4.5vw,54px);text-align:center;letter-spacing:1px;margin-bottom:10px;line-height:1;color:var(--bk);}
+.sec-dk .h2{color:#fff;}
+.sub{text-align:center;color:var(--tx2);font-size:15px;margin-bottom:48px;max-width:540px;margin-left:auto;margin-right:auto;}
+.sec-dk .sub{color:rgba(255,255,255,.55);}
+.hl{color:var(--or);}
+
+/* ADORADA CARDS (1092 x 1440 PROPORÇÃO VERTICAL) */
+.adgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.adcard{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1092/1440;cursor:pointer;box-shadow:var(--sh);transition:var(--tr);}
+.adcard:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 14px 40px rgba(0,0,0,.18);}
+.adcard-bg{position:absolute;inset:0;transition:transform .5s ease;}
+.adcard:hover .adcard-bg{transform:scale(1.07);}
+.adcard.c1 .adcard-bg{background:linear-gradient(160deg,#FF6B35,#FF8C00,#CC4400);}
+.adcard.c2 .adcard-bg{background:linear-gradient(160deg,#FF8FAB,#E91E63,#880E4F);}
+.adcard.c3 .adcard-bg{background:linear-gradient(160deg,#42A5F5,#1565C0,#0D47A1);}
+.adcard.c4 .adcard-bg{background:linear-gradient(160deg,#66BB6A,#2E7D32,#1B5E20);}
+.adcard.c5 .adcard-bg{background:linear-gradient(160deg,#AB47BC,#6A1B9A,#4A148C);}
+.adcard.c6 .adcard-bg{background:linear-gradient(160deg,#26C6DA,#00838F,#006064);}
+.adcard-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.55));}
+.adcard-bot{position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);text-align:center;}
+.adcard-bot-t{font-family:'Bebas Neue',cursive;font-size:18px;color:#fff;letter-spacing:1px;margin-bottom:8px;text-shadow:0 2px 6px rgba(0,0,0,0.6);}
+.btn-conf{display:inline-block;background:#FFD700;color:#000;font-weight:900;font-size:13px;padding:8px 20px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);}
+.btn-conf:hover{background:#FFC000;transform:translateY(-2px);}
+
+/* COVERFLOW */
+.cf-wrap{padding:20px 0 32px;overflow:hidden;position:relative;width:100%;}
+.cf-track{display:flex;align-items:center;justify-content:center;perspective:1200px;height:330px;position:relative;}
+.cf-card{position:absolute;width:260px;height:300px;border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all .5s cubic-bezier(.4,0,.2,1);box-shadow:var(--sh);}
+.cf-inner{width:100%;height:100%;display:flex;flex-direction:column;background:#fff;}
+.cf-top{height:140px;display:flex;align-items:center;justify-content:center;font-size:64px;flex-shrink:0;position:relative;overflow:hidden;}
+.cf-top img{width:100%;height:100%;object-fit:cover;transition:var(--tr);display:block;position:absolute;inset:0;z-index:2;}
+.cf-card:hover .cf-top img{transform:scale(1.05);}
+.cf-top .cf-fallback-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;z-index:1;}
+.cf-body{padding:14px 16px;flex:1;display:flex;flex-direction:column;justify-content:space-between;}
+.cf-body h3{font-family:'Bebas Neue',cursive;font-size:19px;letter-spacing:1px;color:var(--bk);margin-bottom:4px;}
+.cf-body p{font-size:12px;color:var(--tx2);line-height:1.5;flex:1;}
+.cf-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--or);color:#fff;font-weight:800;font-size:12px;padding:9px 14px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;margin-top:8px;width:100%;transition:all .2s;}
+.cf-btn:hover{background:var(--re);}
+
+.cf-bg1 .cf-top{background:linear-gradient(135deg,#FFF3E0,#FFE0B2);}
+.cf-bg2 .cf-top{background:linear-gradient(135deg,#FCE4EC,#F8BBD0);}
+.cf-bg3 .cf-top{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);}
+.cf-bg4 .cf-top{background:linear-gradient(135deg,#FCE4EC,#F8BBD0);}
+.cf-bg5 .cf-top{background:linear-gradient(135deg,#E3F2FD,#BBDEFB);}
+.cf-bg6 .cf-top{background:linear-gradient(135deg,#E8F5E9,#C8E6C9);}
+.cf-bg7 .cf-top{background:linear-gradient(135deg,#FFF8E1,#FFECB3);}
+.cf-bg8 .cf-top{background:linear-gradient(135deg,#EDE7F6,#D1C4E9);}
+.cf-bg9 .cf-top{background:linear-gradient(135deg,#FCE4EC,#F8BBD0);}
+
+.pos-c{transform:translateX(0) scale(1) rotateY(0deg);z-index:10;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.pos-l1{transform:translateX(-220px) scale(.82) rotateY(28deg);z-index:7;filter:brightness(.75);}
+.pos-r1{transform:translateX(220px) scale(.82) rotateY(-28deg);z-index:7;filter:brightness(.75);}
+.pos-l2{transform:translateX(-400px) scale(.65) rotateY(42deg);z-index:4;filter:brightness(.5);}
+.pos-r2{transform:translateX(400px) scale(.65) rotateY(-42deg);z-index:4;filter:brightness(.5);}
+.pos-hid{transform:translateX(-600px) scale(.5);z-index:1;opacity:0;}
+.pos-hidr{transform:translateX(600px) scale(.5);z-index:1;opacity:0;}
+
+.cf-ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:8px;}
+.cf-cbtn{width:42px;height:42px;border-radius:50%;border:2px solid var(--or);background:#fff;color:var(--or);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--tr);}
+.cf-cbtn:hover{background:var(--or);color:#fff;}
+.cf-dots{display:flex;gap:6px;}
+.cfdot{width:8px;height:8px;border-radius:50%;background:rgba(255,140,0,.25);cursor:pointer;transition:var(--tr);}
+.cfdot.on{background:var(--or);transform:scale(1.4);}
+
+/* REVIEWS */
+.rev-wrap{padding:20px 0 32px;overflow:hidden;position:relative;width:100%;}
+.rev-track{display:flex;align-items:center;justify-content:center;perspective:1200px;height:240px;position:relative;}
+.rev-card{position:absolute;width:250px;min-height:240px;border-radius:var(--r);background:#fff;padding:22px 20px;cursor:pointer;transition:all .5s cubic-bezier(.4,0,.2,1);box-shadow:var(--sh);border:1.5px solid var(--gy3);display:flex;flex-direction:column;justify-content:space-between;}
+.rpos-c{transform:translateX(0) scale(1) rotateY(0deg);z-index:10;box-shadow:0 16px 48px rgba(0,0,0,.15);}
+.rpos-l1{transform:translateX(-190px) scale(.82) rotateY(28deg);z-index:7;filter:brightness(.75);}
+.rpos-r1{transform:translateX(190px) scale(.82) rotateY(-28deg);z-index:7;filter:brightness(.75);}
+.rpos-l2{transform:translateX(-360px) scale(.65) rotateY(42deg);z-index:4;filter:brightness(.5);}
+.rpos-r2{transform:translateX(360px) scale(.65) rotateY(-42deg);z-index:4;filter:brightness(.5);}
+.rpos-hid{transform:translateX(-560px);z-index:1;opacity:0;}
+.rpos-hidr{transform:translateX(560px);z-index:1;opacity:0;}
+.rev-stars{font-size:15px;margin-bottom:9px;}
+.rev-txt{font-size:13px;line-height:1.65;color:var(--tx);font-style:italic;margin-bottom:14px;}
+.rev-auth{display:flex;align-items:center;gap:9px;}
+.rev-av{width:36px;height:36px;border-radius:50%;background:var(--or);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rev-name{font-weight:800;font-size:13px;color:var(--bk);}
+.rev-pet{font-size:11px;color:var(--tx3);}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+.why-card{background:#fff;border-radius:var(--r);padding:30px 20px;text-align:center;border:1.5px solid var(--gy3);transition:var(--tr);display:flex;flex-direction:column;align-items:center;}
+.why-card:hover{border-color:var(--or);box-shadow:var(--sho);transform:translateY(-4px);}
+.why-ico{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--or),var(--or3));margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 18px rgba(255,140,0,.3);flex-shrink:0;}
+.why-card h3{font-size:16px;font-weight:900;margin-bottom:8px;}
+.why-card p{color:var(--tx2);font-size:13px;line-height:1.6;}
+
+/* TICKER */
+.ticker-outer{position:relative;overflow:hidden;border-radius:12px;background:linear-gradient(135deg,var(--or),var(--re));margin:32px 0 0;}
+.ticker-fade-l,.ticker-fade-r{position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;}
+.ticker-fade-l{left:0;background:linear-gradient(90deg,var(--or),transparent);}
+.ticker-fade-r{right:0;background:linear-gradient(-90deg,var(--re),transparent);}
+.ticker-track{display:flex;overflow:hidden;padding:18px 0;}
+.ticker-inner{display:flex;align-items:center;white-space:nowrap;animation:tick 40s linear infinite;flex-shrink:0;}
+.ticker-track:hover .ticker-inner{animation-play-state:paused;}
+@keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+.titem{font-weight:800;font-size:15px;color:#fff;padding:0 6px;}
+.titem.gold{color:#FFD700;}
+.tsep{color:rgba(255,255,255,.4);font-size:18px;padding:0 10px;}
+
+/* SERVICES IMAGE HANDLERS */
+.srv-img{width:100%;aspect-ratio:1/1;overflow:hidden;background:var(--gy2);display:flex;align-items:center;justify-content:center;position:relative;}
+.srv-img img{width:100%;height:100%;object-fit:cover;transition:var(--tr);display:block;position:absolute;inset:0;z-index:2;}
+.srv-card:hover .srv-img img{transform:scale(1.05);}
+.srv-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:72px;z-index:1;}
+
+/* PAGE HERO (inner) */
+.ph{padding:120px 24px 68px;text-align:center;position:relative;overflow:hidden;background:#fff;}
+.ph-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,140,0,.06),transparent 70%);pointer-events:none;}
+.ph-cnt{position:relative;z-index:1;}
+.ph h1{font-family:'Bebas Neue',cursive;font-size:clamp(40px,6.5vw,76px);color:var(--bk);letter-spacing:2px;margin-bottom:10px;}
+.ph h1 span{color:var(--or);}
+.ph p{color:var(--tx2);font-size:16px;max-width:560px;margin:0 auto;}
+.bc{display:flex;justify-content:center;gap:7px;font-size:13px;color:var(--tx3);margin-bottom:16px;align-items:center;}
+.bc button{background:none;border:none;color:var(--or);cursor:pointer;font-size:13px;font-family:'Nunito',sans-serif;font-weight:700;}
+
+/* ABOUT */
+.about-txt h2{font-family:'Bebas Neue',cursive;font-size:44px;letter-spacing:1px;margin-bottom:16px;line-height:1;color:var(--bk);}
+.about-txt h2 span{color:var(--or);}
+.about-txt p{color:var(--tx2);font-size:15px;line-height:1.8;margin-bottom:13px;}
+.av-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.av{background:var(--gy);border-radius:var(--rs);padding:15px;border-left:3px solid var(--or);}
+.av h4{font-size:12px;font-weight:900;color:var(--or);margin-bottom:4px;text-transform:uppercase;}
+.av p{font-size:12px;color:var(--tx2);line-height:1.6;}
+
+/* SERVICES PAGE */
+.filter-wrap{overflow-x:auto;scrollbar-width:none;margin-bottom:40px;}
+.filter-wrap::-webkit-scrollbar{display:none;}
+.filter-bar{display:flex;gap:10px;padding:4px 2px 8px;min-width:max-content;margin:0 auto;justify-content:center;}
+.fbtn{display:flex;flex-direction:column;align-items:center;gap:5px;padding:13px 18px;border-radius:14px;border:2px solid var(--gy3);background:#fff;color:var(--tx2);font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;min-width:82px;transition:var(--tr);}
+.fbtn:hover,.fbtn.on{background:var(--or);border-color:var(--or);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,140,0,.28);}
+.fbtn-ico{font-size:24px;line-height:1;}
+.fbtn-lbl{font-size:12px;font-weight:800;}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;}
+.srv-card{background:#fff;border-radius:var(--r);border:1.5px solid var(--gy3);overflow:hidden;transition:var(--tr);}
+.srv-card:hover{border-color:var(--or);box-shadow:var(--sho);transform:translateY(-4px);}
+.srv-body{padding:20px 22px 24px;}
+.srv-body h3{font-size:18px;font-weight:900;margin-bottom:7px;color:var(--bk);}
+.srv-body p{color:var(--tx2);font-size:13px;line-height:1.6;margin-bottom:14px;}
+
+/* BLOG EDITORIAL CARD (No images) */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:26px;}
+.blog-card{min-height:290px;background:#fff;border-radius:var(--r);border:1.5px solid var(--gy3);overflow:hidden;cursor:pointer;transition:var(--tr);display:flex;flex-direction:column;}
+.blog-card:hover{border-color:var(--or);box-shadow:var(--sho);transform:translateY(-4px);}
+.blog-body{padding:24px;flex:1;display:flex;flex-direction:column;justify-content:space-between;}
+.blog-body h3{font-size:19px;font-weight:900;margin-bottom:10px;line-height:1.35;color:var(--bk);}
+.blog-body p{color:var(--tx2);font-size:14px;line-height:1.6;margin-bottom:14px;flex:1;}
+.blog-meta{font-size:12px;color:var(--tx3);border-top:1px solid var(--gy3);padding-top:12px;margin-top:12px;}
+.blog-rm{color:var(--or);font-weight:800;font-size:13px;}
+
+/* ARTICLE */
+.art-w{max-width:760px;margin:0 auto;padding:52px 24px 72px;}
+.art-tag{display:inline-block;background:var(--or);color:#fff;font-size:11px;font-weight:800;padding:3px 12px;border-radius:50px;margin-bottom:13px;text-transform:uppercase;}
+.art-h1{font-family:'Bebas Neue',cursive;font-size:clamp(30px,5vw,50px);letter-spacing:1px;line-height:1.05;margin-bottom:13px;color:var(--bk);}
+.art-meta{display:flex;gap:13px;font-size:12px;color:var(--tx3);margin-bottom:26px;flex-wrap:wrap;}
+.art-body h2{font-family:'Bebas Neue',cursive;font-size:28px;letter-spacing:1px;color:var(--bk);margin:36px 0 13px;}
+.art-body h3{font-size:18px;font-weight:900;color:var(--bk);margin:22px 0 9px;}
+.art-body p{font-size:15px;line-height:1.82;color:var(--tx);margin-bottom:15px;}
+.art-body ul{list-style:disc;padding-left:20px;margin-bottom:15px;}
+.art-body ul li{font-size:15px;line-height:1.8;color:var(--tx);margin-bottom:4px;}
+.art-cta{background:linear-gradient(135deg,var(--or),var(--re));border-radius:var(--r);padding:30px;text-align:center;margin-top:40px;color:#fff;}
+.art-cta h3{font-family:'Bebas Neue',cursive;font-size:26px;letter-spacing:1px;margin-bottom:7px;}
+.art-cta p{margin-bottom:16px;opacity:.92;font-size:14px;}
+.art-rel{margin-top:32px;background:var(--gy);border-radius:var(--r);padding:22px 26px;}
+.art-rel h3{font-family:'Bebas Neue',cursive;font-size:20px;letter-spacing:1px;margin-bottom:12px;color:var(--bk);}
+.art-rel button{display:block;background:none;border:none;color:var(--or);font-weight:700;font-size:14px;cursor:pointer;font-family:'Nunito',sans-serif;margin-bottom:7px;text-align:left;}
+
+/* INLINE BLOG ROUTE LINKS */
+.inline-route-link {
+  display: inline-block;
+  color: var(--or);
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--tr);
+}
+.inline-route-link:hover {
+  color: var(--re);
+  transform: translateY(-1px);
+}
+
+/* CONTACT */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+.ct-info h2{font-family:'Bebas Neue',cursive;font-size:38px;letter-spacing:1px;margin-bottom:8px;color:var(--bk);}
+.ct-info h2 span{color:var(--or);}
+.ct-info>p{color:var(--tx2);font-size:14px;margin-bottom:26px;}
+.citem{display:flex;gap:13px;margin-bottom:20px;}
+.cico{width:44px;height:44px;border-radius:11px;background:rgba(255,140,0,.1);border:1.5px solid rgba(255,140,0,.22);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;}
+.cit h4{font-size:12px;font-weight:900;color:var(--or);margin-bottom:2px;text-transform:uppercase;letter-spacing:.5px;}
+.cit p,.cit a{color:var(--tx2);font-size:14px;line-height:1.5;}
+.cit a:hover{color:var(--or);}
+.pay-box{margin-top:22px;padding:16px 18px;background:var(--gy);border-radius:12px;border:1.5px solid var(--gy3);}
+.pay-ttl{font-size:12px;font-weight:900;color:var(--or);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.pay-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.pay-tag{background:#fff;border:1.5px solid var(--gy3);border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700;}
+.hours-box{background:#fff;border-radius:var(--r);overflow:hidden;border:1.5px solid var(--gy3);box-shadow:var(--sh);}
+.hours-head{background:var(--or);padding:14px 22px;font-family:'Bebas Neue',cursive;font-size:17px;color:#fff;letter-spacing:2px;}
+.hrow{display:flex;justify-content:space-between;padding:13px 22px;border-bottom:1px solid var(--gy3);font-size:14px;}
+.hrow:last-child{border-bottom:none;}
+.hrow.alt{background:rgba(255,140,0,.03);}
+.hday{font-weight:600;color:var(--tx2);}
+.hday.op{color:var(--bk);}
+.htime{font-weight:800;color:var(--or);}
+.htime.cl{color:var(--re);}
+
+/* TAXI DOG HERO VIDEO */
+.td-hero-video-sec {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 130px 24px 70px;
+  text-align: center;
+}
+.td-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+.td-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 100%);
+  z-index: 2;
+}
+.td-video-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.td-video-content h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(38px, 6vw, 72px);
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.td-video-content h1 span {
+  color: var(--or);
+}
+.td-video-content .td-sub-p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.td-video-content .eye {
+  color: var(--or2);
+}
+.td-video-content h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(30px, 4vw, 44px);
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.td-video-content h2 span {
+  color: var(--or);
+}
+.td-video-content .td-search-desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.td-video-content .bc button {
+  color: var(--or2);
+}
+.td-video-content .bc span {
+  color: rgba(255,255,255,0.5);
+}
+
+.td-search-wrap{position:relative;max-width:580px;margin:0 auto 12px;}
+.td-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none;}
+.td-input{width:100%;padding:16px 16px 16px 50px;font-size:16px;font-family:'Nunito',sans-serif;font-weight:600;border:2px solid var(--gy3);border-radius:50px;background:#fff;color:var(--bk);outline:none;transition:var(--tr);box-shadow:var(--sh);}
+.td-input:focus{border-color:var(--or);}
+.td-sugg{position:absolute;top:100%;left:0;right:0;background:#fff;border:1.5px solid var(--or);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.1);z-index:50;overflow:hidden;margin-top:4px;display:none;}
+.td-sugg-item{padding:12px 18px;cursor:pointer;font-weight:700;font-size:14px;transition:var(--tr);}
+.td-sugg-item:hover{background:rgba(255,140,0,.07);color:var(--or);}
+.td-result{display:none;padding:14px 20px;border-radius:12px;font-size:14px;font-weight:700;text-align:center;margin-top:8px;max-width:580px;margin-left:auto;margin-right:auto;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;}
+.td-result.found{display:flex;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);color:#2e7d32;border:1.5px solid #a5d6a7;}
+.td-result.nofound{display:flex;background:linear-gradient(135deg,#fff3e0,#ffe0b2);color:#e65100;border:1.5px solid #ffcc80;}
+.td-result button{background:var(--or);color:#fff;border:none;padding:7px 15px;border-radius:50px;font-weight:800;font-size:12px;cursor:pointer;font-family:'Nunito',sans-serif;}
+
+.bairros-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:14px;}
+.bcard{background:#fff;border-radius:14px;border:1.5px solid var(--gy3);padding:16px 18px;display:flex;align-items:center;gap:12px;transition:var(--tr);position:relative;}
+.bcard:hover{border-color:var(--or);box-shadow:var(--sho);transform:translateY(-4px);}
+.bcard.sede{background:linear-gradient(135deg,var(--or),var(--or3));border-color:var(--or);}
+.bcard-ico{width:36px;height:36px;border-radius:10px;background:rgba(255,140,0,.12);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.bcard.sede .bcard-ico{background:rgba(255,255,255,.22);}
+.bcard-name{font-weight:900;font-size:13px;color:var(--bk);line-height:1.2;margin-bottom:2px;}
+.bcard.sede .bcard-name{color:#fff;}
+.bcard-tag{font-size:10px;font-weight:700;color:var(--or);text-transform:uppercase;letter-spacing:.5px;}
+.bcard.sede .bcard-tag{color:rgba(255,255,255,.8);}
+.bcard-cta{background:var(--bk);border-color:var(--bk);cursor:pointer;}
+.bcard-cta .bcard-name{color:#fff;}
+.bcard-cta .bcard-ico{background:rgba(255,140,0,.2);}
+.bcard-cta .bcard-tag{color:var(--or2);}
+.bcard-cta:hover{border-color:var(--or);}
+
+/* COMO FUNCIONA - CARD E LAYOUT CLARO (FAIXA PRETA REMOVIDA) */
+.proc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.proc-card{background:#fff;border:1.5px solid var(--gy3);border-radius:var(--r);padding:26px 20px;text-align:center;position:relative;transition:var(--tr);box-shadow:var(--sh);}
+.proc-card:hover{border-color:var(--or);box-shadow:var(--sho);transform:translateY(-4px);}
+.proc-num{font-family:'Bebas Neue',cursive;font-size:54px;color:rgba(255,140,0,.12);position:absolute;top:10px;right:14px;line-height:1;}
+.proc-ico{font-size:34px;margin-bottom:12px;display:block;}
+.proc-card h3{font-size:15px;font-weight:900;color:var(--bk);margin-bottom:7px;}
+.proc-card p{font-size:13px;color:var(--tx2);line-height:1.6;}
+
+/* FOOTER */
+.footer{background:var(--bk);color:#fff;padding:56px 24px 20px;}
+.fgrid{display:grid;grid-template-columns:2fr 1.5fr;gap:32px;margin-bottom:40px;}
+.flogo{font-family:'Bebas Neue',cursive;font-size:24px;letter-spacing:2px;color:var(--or);margin-bottom:9px;}
+.fbrand p{color:rgba(255,255,255,.5);font-size:13px;line-height:1.7;margin-bottom:16px;}
+.fsoc{display:inline-block;background:rgba(255,140,0,.12);border:1px solid rgba(255,140,0,.28);color:var(--or);padding:7px 14px;border-radius:50px;font-size:12px;font-weight:600;transition:var(--tr);}
+.fsoc:hover{background:var(--or);color:#fff;}
+.fgrid h4{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;color:var(--or);margin-bottom:12px;}
+.fct p{color:rgba(255,255,255,.5);font-size:13px;line-height:1.6;margin-bottom:6px;}
+.fct a{color:var(--or);}
+.fbot{border-top:1px solid rgba(255,255,255,.07);padding-top:18px;text-align:center;}
+.fbot p{color:rgba(255,255,255,.28);font-size:11px;}
+.ftbl{margin-top:10px;font-size:12px;border-collapse:collapse;width:100%;}
+.ftbl td{padding:3px 0;color:rgba(255,255,255,.5);}
+.ftbl td:last-child{text-align:right;font-weight:700;color:var(--or);}
+.ftbl tr:first-child td:last-child,.ftbl tr:last-child td:last-child{color:var(--re);}
+
+/* WPP FLOAT */
+.wf{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.5);z-index:999;transition:var(--tr);animation:pg 3s ease-in-out infinite;background:none;border:none;}
+.wf:hover{transform:scale(1.1) rotate(-10deg);}
+@keyframes pg{0%,100%{box-shadow:0 6px 20px rgba(37,211,102,.5);}50%{box-shadow:0 6px 36px rgba(37,211,102,.8);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.fgrid{grid-template-columns:1fr 1fr;}.ct-grid{grid-template-columns:1fr;}}
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:66px;left:0;right:0;background:#fff;padding:14px;border-bottom:2px solid var(--or);box-shadow:0 8px 22px rgba(0,0,0,.1);}
+  .nav-links.open{display:flex;}
+  .nav-links .nav-btn{color:var(--tx2) !important;}
+  .nav-links .nav-btn.active{color:var(--or) !important;}
+  .nav-cta{display:none;}
+  .hb{display:flex;}
+  
+  /* Diferenciais em 2 colunas pequenas e compactas para celular */
+  .why-grid{grid-template-columns:repeat(2,1fr) !important;gap:12px !important;}
+  .why-card{padding:16px 12px !important;border-radius:12px !important;}
+  .why-ico{width:48px !important;height:48px !important;font-size:20px !important;margin-bottom:8px !important;}
+  .why-card h3{font-size:13px !important;margin-bottom:4px !important;}
+  .why-card p{font-size:11px !important;line-height:1.4 !important;}
+  
+  /* Serviços em 2 colunas com layout otimizado */
+  .adgrid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  
+  .sec{padding:56px 16px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .fgrid{grid-template-columns:1fr;}
+  .cf-track{height:280px;}
+  .pos-l2,.pos-r2{display:none;}
+  .rpos-l2,.rpos-r2{display:none;}
+  .av-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .hero-btns{flex-direction:column;align-items:center;}
+  .adgrid{grid-template-columns:repeat(2,1fr);}
+  .why-grid{grid-template-columns:repeat(2,1fr) !important;}
+  .bairros-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nb">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="goTo('inicio')">
+      <div class="nav-logo-dot">🐾</div>
+      <span class="nav-logo-txt">PET DA VILA</span>
+    </div>
+    <ul class="nav-links" id="nl">
+      <li><button class="nav-btn" onclick="goTo('inicio')">Início</button></li>
+      <li><button class="nav-btn" onclick="goTo('quem-somos')">Quem Somos</button></li>
+      <li><button class="nav-btn" onclick="goTo('servicos')">Serviços</button></li>
+      <li><button class="nav-btn" onclick="goTo('blog')">Blog</button></li>
+      <li><button class="nav-btn" onclick="goTo('taxi-dog')">Táxi Dog</button></li>
+      <li><button class="nav-btn" onclick="goTo('contato')">Contato</button></li>
+    </ul>
+    <button class="nav-cta" onclick="wa()">Reservar Horário</button>
+    <button class="hb" id="hb" aria-label="Abrir Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ===== INÍCIO ===== -->
+<div class="pg active" id="pg-inicio">
+  <section class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="videios/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-ov"></div>
+    <div class="hero-glow"></div>
+    <div class="paws-c" id="pawsC"></div>
+    <div class="hero-cnt">
+      <span class="hero-badge">🐾 Banho e Tosa · Táxi Dog · Estética Animal — São Paulo</span>
+      <h1 class="hero-h1">Banho e Tosa em São Paulo<br/><span class="hero-hl">Vila dos Remédios</span></h1>
+      <p class="hero-sub">Cuidado profissional para cães e gatos desde 2014.<br/>Agende com hora marcada — sem fila, sem espera.</p>
+      <div class="hero-btns">
+        <button class="bp lg" onclick="wa('Olá! Quero agendar banho e tosa.')">Reservar Horário</button>
+        <button class="bs" onclick="goTo('servicos')">Ver Serviços</button>
+      </div>
+    </div>
+    <div class="scroll-h"><span class="scroll-a">↓</span></div>
+  </section>
+
+  <!-- BLOCK PRINCIPAL DE BANNER DE SERVIÇOS -->
+  <section class="sec">
+    <div class="cnt">
+      <span class="eye">Estética Animal Profissional em São Paulo</span>
+      <h2 class="h2">Nossos <span class="hl">Serviços</span></h2>
+      <p class="sub">Serviços completos para cães e gatos em Vila dos Remédios, São Paulo</p>
+      <div class="adgrid">
+        <div class="adcard c1" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/banho-cao (2).jpg" alt="Banho para Cães" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">BANHO PARA CÃES</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero agendar banho para meu cão!')">AGENDAR</button></div>
+        </div>
+        <div class="adcard c2" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/banho-gato (2).jpg" alt="Banho para Gatos" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">BANHO PARA GATOS</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero agendar banho para meu gato!')">AGENDAR</button></div>
+        </div>
+        <div class="adcard c3" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/tosa-profissional.jpg" alt="Tosa Profissional" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">TOSA PROFISSIONAL</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero agendar uma tosa!')">AGENDAR</button></div>
+        </div>
+        <div class="adcard c4" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/hidratacao-spa.jpg" alt="Hidratação e Spa" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">HIDRATAÇÃO & SPA</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero agendar hidratação!')">AGENDAR</button></div>
+        </div>
+        <div class="adcard c5" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/taxi-dog (2).jpg" alt="Táxi Dog" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">TÁXI DOG</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero o serviço de Táxi Dog!')">AGENDAR</button></div>
+        </div>
+        <div class="adcard c6" onclick="goTo('servicos')">
+          <div class="adcard-bg">
+            <img src="imagens/higiene-completa.jpg" alt="Higiene Completa" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:var(--tr);" onerror="this.style.display='none';">
+          </div>
+          <div class="adcard-ov"></div>
+          <div class="adcard-bot"><div class="adcard-bot-t">HIGIENE COMPLETA</div><button class="btn-conf" onclick="event.stopPropagation();wa('Quero agendar higiene completa!')">AGENDAR</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO CARROSSEL (TOUCH + SETAS DE CONTROLE + VER TODOS OS SERVIÇOS) -->
+  <section class="sec sec-gy">
+    <div class="cnt">
+      <span class="eye">Serviços de Banho e Tosa em São Paulo</span>
+      <h2 class="h2">Tudo que seu Pet <span class="hl">Precisa e Merece</span></h2>
+      <p class="sub">Conheça cada serviço e agende pelo WhatsApp com um clique</p>
+      <div class="cf-wrap">
+        <div class="cf-track" id="cfTrack"></div>
+        <div class="cf-ctrl">
+          <button class="cf-cbtn" onclick="cfPrev()" aria-label="Anterior">‹</button>
+          <div class="cf-dots" id="cfDots"></div>
+          <button class="cf-cbtn" onclick="cfNext()" aria-label="Próximo">›</button>
+        </div>
+        <!-- Botão Ver Todos os Serviços logo abaixo -->
+        <div style="text-align:center; margin-top:32px;">
+          <button class="bp" onclick="goTo('servicos')">Ver Todos os Serviços</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="cnt">
+      <span class="eye">Táxi Dog & Cobertura</span>
+      <h2 class="h2">Atendemos na <span class="hl">Zona Oeste de SP</span></h2>
+      <p class="sub">Táxi Dog disponível num raio de até 6km — buscamos seu pet onde você estiver</p>
+      <div class="ticker-outer">
+        <div class="ticker-fade-l"></div><div class="ticker-fade-r"></div>
+        <div class="ticker-track">
+          <div class="ticker-inner">
+            <span class="titem">📍 Vila dos Remédios</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Mangalot</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Santo Elias</span><span class="tsep">·</span>
+            <span class="titem">📍 Parque São Domingos</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Jaguara</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Piauí</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Santa Edwiges</span><span class="tsep">·</span>
+            <span class="titem">📍 City América</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Marisa</span><span class="tsep">·</span>
+            <span class="titem">📍 Chácara São João</span><span class="tsep">·</span>
+            <span class="titem">📍 Parque Maria Domitila</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Boaçava</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Mangalot</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Jaraguá</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Mutinga</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Guedes</span><span class="tsep">·</span>
+            <span class="titem gold">🚗 E regiões próximas!</span><span class="tsep">·</span>
+          </div>
+          <div class="ticker-inner" aria-hidden="true">
+            <span class="titem">📍 Vila dos Remédios</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Mangalot</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Santo Elias</span><span class="tsep">·</span>
+            <span class="titem">📍 Parque São Domingos</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Jaguara</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Piauí</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Santa Edwiges</span><span class="tsep">·</span>
+            <span class="titem">📍 City América</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Marisa</span><span class="tsep">·</span>
+            <span class="titem">📍 Chácara São João</span><span class="tsep">·</span>
+            <span class="titem">📍 Parque Maria Domitila</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Boaçava</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Mangalot</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Jaraguá</span><span class="tsep">·</span>
+            <span class="titem">📍 Jardim Mutinga</span><span class="tsep">·</span>
+            <span class="titem">📍 Vila Guedes</span><span class="tsep">·</span>
+            <span class="titem gold">🚗 E regiões próximas!</span><span class="tsep">·</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <button class="bp" onclick="goTo('taxi-dog')">🚗 Ver Bairros Atendidos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS COMPACTOS -->
+  <section class="sec sec-gy">
+    <div class="cnt">
+      <span class="eye">Por que nos escolher</span>
+      <h2 class="h2">Diferenciais do <span class="hl">Pet da Vila</span></h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-ico">❤️</div><h3>Atendimento com Amor</h3><p>Cada pet tratado com o mesmo carinho que daríamos ao nosso próprio animal.</p></div>
+        <div class="why-card"><div class="why-ico">🏆</div><h3>11 Anos de Experiência</h3><p>Desde 2014 cuidando dos pets da Vila dos Remédios, São Paulo.</p></div>
+        <div class="why-card"><div class="why-ico">📅</div><h3>Horário Agendado</h3><p>Sem filas. Atendimento exclusivo para o seu pet na hora marcada.</p></div>
+        <div class="why-card"><div class="why-ico">🚗</div><h3>Táxi Dog SP</h3><p>Buscamos e levamos seu pet. 16+ bairros atendidos na zona oeste.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES TOUCH -->
+  <section class="sec">
+    <div class="cnt">
+      <span class="eye">Avaliações Google</span>
+      <h2 class="h2">O que nossos <span class="hl">Clientes Dizem</span></h2>
+      <p class="sub">Avaliações reais de tutores sobre o banho e tosa na Vila dos Remédios</p>
+      <div class="rev-wrap">
+        <div class="rev-track" id="revTrack"></div>
+        <div class="cf-ctrl">
+          <div class="cf-dots" id="revDots"></div>
+        </div>
+      </div>
+      <!-- Botão de conexão direta com as avaliações do Google Maps -->
+      <div style="text-align:center; margin-top:28px;">
+        <a href="https://www.google.com/search?q=PET+DA+VILA+CENTRO+DE+ESTETICA+ANIMAL+LTDA%250D%250A&rlz=1C1GCEA_pt-BRBR1203BR1203&oq=pet+&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyCAgCEEUYJxg7MgYIAxBFGDsyBggEEEUYPTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDIzMDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" class="bp">
+          ⭐ Ver Todas as Avaliações no Google
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== QUEM SOMOS ===== -->
+<div class="pg" id="pg-quem-somos">
+  <section class="ph"><div class="ph-bg"></div><div class="ph-cnt">
+    <nav class="bc"><button onclick="goTo('inicio')">Início</button><span>/</span><span>Quem Somos</span></nav>
+    <h1>Nossa <span>História</span></h1>
+    <p>Mais de 11 anos cuidando do seu pet com carinho e profissionalismo</p>
+  </div></section>
+  <section class="sec"><div class="cnt" style="max-width:760px">
+    <span class="eye" style="text-align:left">Desde 2014</span>
+    <div class="about-txt">
+      <h2>Pet da Vila — <span>Vila dos Remédios, SP</span></h2>
+      <p>Fundado in 2014, o Pet da Vila Centro de Estética Animal nasceu com a missão de oferecer serviços de banho e tosa para cães e gatos com qualidade, segurança e atendimento personalizado.</p>
+      <p>Localizado na Vila dos Remédios, em São Paulo, o Pet da Vila tornou-se referência em banho e tosa, tosa higiênica, tosa na máquina, hidratação de pelagem e serviço de táxi dog para toda a região da Zona Oeste.</p>
+      <p>Ao longo dos anos, conquistamos a confiança de centenas de tutores que procuram um pet shop especializado em estética animal, bem-estar e cuidados para cães e gatos. Trabalhamos para que cada pet receba atenção individual, conforto e uma experiência tranquila durante todo o atendimento.</p>
+      <p>Nosso compromisso é oferecer um ambiente seguro, limpo e preparado para proporcionar o melhor cuidado para seu companheiro de quatro patas, sempre respeitando as características e necessidades de cada animal.</p>
+      <div class="av-grid">
+        <div class="av"><h4>Missão</h4><p>Oferecer serviços de banho e tosa de excelência para cães e gatos, promovendo higiene, saúde, bem-estar e qualidade de vida através de um atendimento humanizado e especializado.</p></div>
+        <div class="av"><h4>Visão</h4><p>Ser reconhecido como um dos melhores centros de estética animal da Zona Oeste de São Paulo, destacando-se pela qualidade dos serviços, confiança dos clientes e amor dedicado aos pets.</p></div>
+        <div class="av"><h4>Valores</h4><p>Amor e respeito pelos animais, profissionalismo, responsabilidade, ética, transparência, atendimento com carinho e compromisso com o bem-estar dos pets.</p></div>
+        <div class="av"><h4>Nosso Compromisso</h4><p>Oferecer um atendimento cuidadoso, seguro e personalizado, garantindo que cada pet receba atenção, conforto e carinho durante toda a sua experiência no Pet da Vila.</p></div>
+      </div>
+      <div style="margin-top:28px;text-align:center">
+        <button class="bp" onclick="wa('Quero agendar banho e tosa!')">Reservar Horário</button>
+      </div>
+    </div>
+  </div></section>
+  <section class="sec sec-gy"><div class="cnt">
+    <span class="eye">Diferenciais</span>
+    <h2 class="h2">Por que escolher o <span class="hl">Pet da Vila?</span></h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-ico">📅</div><h3>Horário Agendado</h3><p>Atendimento exclusivo sem filas em Vila dos Remédios, SP.</p></div>
+      <div class="why-card"><div class="why-ico">🚗</div><h3>Táxi Dog SP</h3><p>Busca e leva seu pet com segurança em mais de 16 bairros.</p></div>
+      <div class="why-card"><div class="why-ico">✂️</div><h3>Tosa Profissional</h3><p>Tosa da raça, na tesoura, na máquina e higiênica.</p></div>
+      <div class="why-card"><div class="why-ico">🐱</div><h3>Especialistas em Gatos</h3><p>Técnica especializada em estética felina com paciência.</p></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ===== SERVIÇOS ===== -->
+<div class="pg" id="pg-servicos">
+  <section class="ph"><div class="ph-bg"></div><div class="ph-cnt">
+    <nav class="bc"><button onclick="goTo('inicio')">Início</button><span>/</span><span>Serviços</span></nav>
+    <h1>Serviços de <span>Banho e Tosa em SP</span></h1>
+    <p>Banho, tosa, hidratação, táxi dog e higiene para cães e gatos em Vila dos Remédios</p>
+  </div></section>
+  
+  <section class="sec"><div class="cnt">
+    <h2 class="h2" style="margin-bottom:8px">Escolha o Serviço para <span class="hl">Seu Pet</span></h2>
+    <p class="sub">Filtre por categoria e agende pelo WhatsApp</p>
+    <div class="filter-wrap">
+      <div class="filter-bar">
+        <button class="fbtn on" onclick="fSrv('todos',this)"><span class="fbtn-ico">🐾</span><span class="fbtn-lbl">Todos</span></button>
+        <button class="fbtn" onclick="fSrv('banho',this)"><span class="fbtn-ico">🛁</span><span class="fbtn-lbl">Banho Cães</span></button>
+        <button class="fbtn" onclick="fSrv('tosa',this)"><span class="fbtn-ico">✂️</span><span class="fbtn-lbl">Tosa</span></button>
+        <button class="fbtn" onclick="fSrv('gatos',this)"><span class="fbtn-ico">🐱</span><span class="fbtn-lbl">Gatos</span></button>
+        <button class="fbtn" onclick="fSrv('higiene',this)"><span class="fbtn-ico">🦷</span><span class="fbtn-lbl">Higiene</span></button>
+        <button class="fbtn" onclick="fSrv('extras',this)"><span class="fbtn-ico">🚗</span><span class="fbtn-lbl">Táxi Dog</span></button>
+      </div>
+    </div>
+    <div class="srv-grid" id="srvGrid">
+      <div class="srv-card" data-cat="banho">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">🛁</div>
+          <img src="imagens/banho-cao.jpg" alt="Banho para Cães" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Banho para Cães em São Paulo</h3><p>Banho completo com shampoo premium, condicionador, secagem profissional e perfumação.</p><button class="bw" onclick="wa('Quero agendar banho para meu cão!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="banho">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">💧</div>
+          <img src="imagens/hidratacao-cao.jpg" alt="Hidratação de Pelagem" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Hidratação de Pelagem para Cães</h3><p>Tratamento profundo para pelos ressecados. Resultado imediato: pelo macio e brilhoso.</p><button class="bw" onclick="wa('Quero agendar hidratação de pelagem!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="banho">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#EDE7F6,#D1C4E9)">💊</div>
+          <img src="imagens/banho-medicinal.jpg" alt="Banho Medicinal" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Banho Medicinal para Cães SP</h3><p>Para pets com alergias, fungos ou dermatite. Produtos terapeuticos específicos.</p><button class="bw" onclick="wa('Quero agendar banho medicinal!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="banho">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FFF8E1,#FFECB3)">🌀</div>
+          <img src="imagens/remocao-subpelo.jpg" alt="Remoção de Subpelo" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Remoção de Subpelo em São Paulo</h3><p>Para Husky, Golden, Border Collie. Previne dermatite e queda excessiva de pelos.</p><button class="bw" onclick="wa('Quero agendar remoção de subpelo!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="tosa">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0)">✂️</div>
+          <img src="imagens/tosa-higienica-cao.jpg" alt="Tosa Higiênica" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Tosa Higiênica para Cães SP</h3><p>Remove pelo das regiões íntimas, patas e face. Fundamental para o conforto do pet.</p><button class="bw" onclick="wa('Quero agendar tosa higiênica!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="tosa">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">⚙️</div>
+          <img src="imagens/tosa-maquina.jpg" alt="Tosa na Máquina" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Tosa na Máquina São Paulo</h3><p>Pelo uniforme com pentes graduados. Prática, higiênica e com excelente acabamento.</p><button class="bw" onclick="wa('Quero agendar tosa na máquina!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="tosa">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">🪡</div>
+          <img src="imagens/tosa-tesoura.jpg" alt="Tosa na Tesoura" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Tosa na Tesoura São Paulo</h3><p>Acabamento refinado e detalhado. Perfeito para raças que exigem mais precisão.</p><button class="bw" onclick="wa('Quero agendar tosa na tesoura!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="gatos">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0)">🐱</div>
+          <img src="imagens/banho-gato.jpg" alt="Banho para Gatos" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Banho para Gatos em São Paulo</h3><p>Técnica especializada para felinos. Produtos específicos para pele de gato.</p><button class="bw" onclick="wa('Quero agendar banho para meu gato!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="gatos">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#EDE7F6,#D1C4E9)">✂️</div>
+          <img src="imagens/tosa-higienica-gato.jpg" alt="Tosa Higiênica para Gatos" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Tosa Higiênica para Gatos SP</h3><p>Remove pelo das regiões íntimas do felino com profissionais treinados.</p><button class="bw" onclick="wa('Quero agendar tosa para meu gato!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="gatos">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FFF8E1,#FFECB3)">🔓</div>
+          <img src="imagens/desembolamento-gato.jpg" alt="Desembolamento Felino" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Desembolamento Felino SP</h3><p>Remoção de nós e embaraços nos pelos do gato sem estresse.</p><button class="bw" onclick="wa('Quero agendar desembolamento!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="higiene">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">💅</div>
+          <img src="imagens/corte-unhas.jpg" alt="Corte de Unhas" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Corte de Unhas para Pets SP</h3><p>Evita dor e problemas posturais. Incluído em todos os pacotes de banho e tosa.</p><button class="bw" onclick="wa('Quero agendar corte de unhas!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="higiene">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2)">👂</div>
+          <img src="imagens/limpeza-ouvidos.jpg" alt="Limpeza de Ouvidos" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Limpeza de Ouvidos para Pets</h3><p>Previne infecções e otites. Feita com produtos adequados e muito cuidado.</p><button class="bw" onclick="wa('Quero agendar limpeza de ouvidos!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="higiene">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">🦷</div>
+          <img src="imagens/escovacao-dental.jpg" alt="Escovação Dental" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Escovação Dental para Cães SP</h3><p>Previne tártaro e doenças na gengiva. Fundamental para a saúde do pet.</p><button class="bw" onclick="wa('Quero agendar escovação dental!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="higiene">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#FCE4EC,#F8BBD0)">🧼</div>
+          <img src="imagens/higienizacao-intima.jpg" alt="Higienização Íntima" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Higienização Íntima Pet SP</h3><p>Limpeza cuidadosa das regiões íntimas. Previne infecções e irritações.</p><button class="bw" onclick="wa('Quero agendar higienização íntima!')">Reservar Horário</button></div>
+      </div>
+      <div class="srv-card" data-cat="extras">
+        <div class="srv-img">
+          <div class="srv-fallback" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">🚗</div>
+          <img src="imagens/taxi-dog.jpg" alt="Táxi Dog" onerror="this.style.display='none';">
+        </div>
+        <div class="srv-body"><h3>Táxi Dog em São Paulo</h3><p>Buscamos e levamos seu pet até o Pet da Vila com segurança e pontualidade.</p><button class="bw" onclick="wa('Quero o serviço de Táxi Dog!')">Reservar Horário</button></div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ===== BLOG ===== -->
+<div class="pg" id="pg-blog">
+  <section class="ph"><div class="ph-bg"></div><div class="ph-cnt">
+    <nav class="bc"><button onclick="goTo('inicio')">Início</button><span>/</span><span>Blog</span></nav>
+    <h1>Blog: <span>Dicas de Banho e Tosa</span></h1>
+    <p>Cuidados com cães e gatos em São Paulo — dicas do Pet da Vila</p>
+  </div></section>
+  <section class="sec"><div class="cnt">
+    <span class="eye">Conteúdo sobre pets em SP</span>
+    <h2 class="h2">Dicas de <span class="hl">Banho, Tosa e Cuidados</span></h2>
+    <p class="sub">Informações úteis para tutores de cães e gatos em São Paulo</p>
+    <div class="blog-grid" id="blogGrid"></div>
+  </div></section>
+</div>
+
+<!-- ===== ARTIGO ===== -->
+<div class="pg" id="pg-artigo">
+  <div style="padding-top:66px"></div>
+  <div class="art-w" id="artContent"></div>
+</div>
+
+<!-- ===== CONTATO ===== -->
+<div class="pg" id="pg-contato">
+  <section class="ph"><div class="ph-bg"></div><div class="ph-cnt">
+    <nav class="bc"><button onclick="goTo('inicio')">Início</button><span>/</span><span>Contato</span></nav>
+    <h1>Fale com o <span>Pet da Vila</span></h1>
+    <p>Entre em contato — Vila dos Remédios, São Paulo</p>
+  </div></section>
+  <section class="sec"><div class="cnt">
+    <div class="ct-grid">
+      <div class="ct-info">
+        <h2>Vamos <span>conversar?</span></h2>
+        <p>Agende o banho e tosa do seu pet em Vila dos Remédios, São Paulo.</p>
+        <div class="citem"><div class="cico">📍</div><div class="cit"><h4>Endereço</h4><p>R. Antônio Ayrosa, 714<br/>Vila dos Remédios, SP — CEP 05103-000</p></div></div>
+        <div class="citem"><div class="cico">📱</div><div class="cit"><h4>WhatsApp</h4><a href="https://wa.me/5511963623660" target="_blank">(11) 96362-3660</a></div></div>
+        <div class="citem"><div class="cico">📷</div><div class="cit"><h4>Instagram</h4><a href="https://instagram.com/petdavila2023" target="_blank">@petdavila2023</a></div></div>
+        <div class="citem"><div class="cico">⏰</div><div class="cit"><h4>Horário</h4><p>Seg–Sáb: 09h00–18h00<br/>Domingo: Fechado · Feriados: 10h00–16h00</p></div></div>
+        <button class="bp" onclick="wa('Quero agendar banho e tosa!')" style="margin-top:16px">Reservar Horário</button>
+        <div class="pay-box">
+          <div class="pay-ttl">💳 Formas de Pagamento</div>
+          <div class="pay-tags">
+            <span class="pay-tag">💳 Crédito</span>
+            <span class="pay-tag">💳 Débito</span>
+            <span class="pay-tag">💵 Dinheiro</span>
+            <span class="pay-tag">📱 Pix</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="hours-box">
+          <div class="hours-head">🕐 Horário de Funcionamento</div>
+          <div class="hrow"><span class="hday op">Segunda-feira</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow alt"><span class="hday op">Terça-feira</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow"><span class="hday op">Quarta-feira</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow alt"><span class="hday op">Quinta-feira</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow"><span class="hday op">Sexta-feira</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow alt"><span class="hday op">Sábado</span><span class="htime">09:00 – 18:00</span></div>
+          <div class="hrow"><span class="hday">Domingo</span><span class="htime cl">Fechado</span></div>
+          <div class="hrow alt"><span class="hday op">Feriados</span><span class="htime">10:00 – 16:00</span></div>
+        </div>
+        <p style="text-align:center;color:var(--tx3);font-size:13px;margin-top:12px;">📍 Atendemos encaixes além dos agendamentos</p>
+      </div>
+    </div>
+
+    <!-- GOOGLE MAPS DIRECT INTEGRATION -->
+    <div style="margin-top: 48px;">
+      <h3 class="h2" style="text-align: left; font-size: 24px; margin-bottom: 12px;">Como nos <span>encontrar?</span></h3>
+      <div style="border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--gy3);height:380px;position:relative;">
+        <div style="position:absolute;top:14px;left:14px;background:#111;color:#fff;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;z-index:10;">📍 <span style="color:var(--or)">Pet da Vila</span> — Vila dos Remédios, SP</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.042!2d-46.72706!3d-23.51283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef80d7e1ad22f%3A0x7c7e5a7b7e6f5c7d!2sR.+Ant%C3%B4nio+Ayrosa%2C+714+-+Vila+dos+Rem%C3%A9dios%2C+S%C3%A3o+Paulo!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none;"></iframe>
+      </div>
+    </div>
+
+  </div></section>
+</div>
+
+<!-- ===== TÁXI DOG ===== -->
+<div class="pg" id="pg-taxi-dog">
+  <!-- Unificado: Hero + Busca em um único container de vídeo de fundo -->
+  <section class="td-hero-video-sec">
+    <video autoplay loop muted playsinline class="td-bg-video">
+      <source src="videios/taxi-dog-video.mp4" type="video/mp4">
+    </video>
+    <div class="td-video-overlay"></div>
+    
+    <div class="td-video-content cnt">
+      <!-- Breadcrumbs -->
+      <nav class="bc" style="margin-bottom: 12px;">
+        <button onclick="goTo('inicio')">Início</button>
+        <span>/</span>
+        <span style="color: rgba(255,255,255,0.85);">Táxi Dog</span>
+      </nav>
+      
+      <!-- H1 Principal do Header -->
+      <h1>Táxi Dog na <span>Zona Oeste de SP</span></h1>
+      <p class="td-sub-p">Buscamos e levamos seu pet com conforto e segurança — sem você sair de casa</p>
+      
+      <!-- Linha divisória sutil para organizar visualmente as duas partes -->
+      <div style="width: 80px; height: 3px; background: var(--or); margin: 0 auto 34px; border-radius: 20px;"></div>
+      
+      <!-- Seção de Busca Integrada -->
+      <span class="eye">Verifique agora</span>
+      <h2>Seu Bairro é <span>Atendido?</span></h2>
+      <p class="td-search-desc">Digite o nome do seu bairro e descobra na hora</p>
+      
+      <div class="td-search-wrap">
+        <span class="td-ico">🔍</span>
+        <input type="text" class="td-input" id="tdInput" placeholder="Ex: Vila Jaguara, Parque São Domingos..." autocomplete="off"/>
+        <div class="td-sugg" id="tdSugg"></div>
+      </div>
+      <div class="td-result" id="tdResult"></div>
+      <p style="text-align:center; color:rgba(255, 255, 255, 0.75); font-size:13px; margin-top:16px;">
+        💡 Também atendemos regiões próximas — consulte via WhatsApp
+      </p>
+    </div>
+  </section>
+
+  <!-- LISTA DE BAIRROS ATENDIDOS -->
+  <section class="sec"><div class="cnt">
+    <span class="eye">Cobertura completa</span>
+    <h2 class="h2">Bairros <span class="hl">Atendidos</span></h2>
+    <p class="sub">Táxi Dog na Zona Oeste de SP — raio de até 6km</p>
+    <div class="bairros-grid">
+      <div class="bcard sede"><div class="bcard-ico">📍</div><div><div class="bcard-name">Vila dos Remédios</div><span class="bcard-tag">Nossa Sede</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Jaguara</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Mangalot</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Jardim Santo Elias</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Parque São Domingos</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">City América</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Piauí</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Chácara São João</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Parque Maria Domitila</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Boaçava</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Jardim Mangalot</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Jaraguá</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Jardim Mutinga</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Renk</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Figueira</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Vila Santa Edwiges</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard"><div class="bcard-ico">🗺️</div><div><div class="bcard-name">Jardim Marisa</div><span class="bcard-tag">Táxi Dog</span></div></div>
+      <div class="bcard bcard-cta" onclick="wa('Quero saber se atendem meu bairro com Táxi Dog!')"><div class="bcard-ico">💬</div><div><div class="bcard-name">Seu bairro?</div><span class="bcard-tag">Consultar</span></div></div>
+    </div>
+  </div></section>
+
+  <!-- SEÇÃO 'COMO FUNCIONA O TÁXI DOG' EM LAYOUT CLARO E TEXTOS EM PRETO (FAIXA PRETA REMOVIDA) -->
+  <section class="sec sec-gy"><div class="cnt">
+    <span class="eye" style="color:var(--or)">Simples assim</span>
+    <h2 class="h2" style="color:var(--bk)">Como Funciona o <span class="hl">Táxi Dog</span></h2>
+    <p class="sub" style="color:var(--tx2)">Em 4 passos simples o seu pet é atendido sem você sair de casa</p>
+    <div class="proc-grid">
+      <div class="proc-card"><div class="proc-num">01</div><span class="proc-ico">💬</span><h3>Agende pelo WhatsApp</h3><p>Mande mensagem para (11) 96362-3660. Informe seu bairro e o serviço desejado.</p></div>
+      <div class="proc-card"><div class="proc-num">02</div><span class="proc-ico">📅</span><h3>Confirme data e hora</h3><p>Combinamos o horário mais conveniente para buscar seu pet na sua casa.</p></div>
+      <div class="proc-card"><div class="proc-num">03</div><span class="proc-ico">🚗</span><h3>Buscamos seu pet</h3><p>Nosso motorista vai até você com segurança e carinho até o Pet da Vila.</p></div>
+      <div class="proc-card"><div class="proc-num">04</div><span class="proc-ico">✨</span><h3>Devolvemos novinho</h3><p>Após o banho e tosa, seu pet é devolvido limpo, cheiroso e feliz na sua porta.</p></div>
+    </div>
+  </div></section>
+
+  <!-- LOCALIZAÇÃO DO PET DA VILA -->
+  <section class="sec"><div class="cnt">
+    <span class="eye">Nossa localização</span>
+    <h2 class="h2" style="margin-bottom:8px">Ponto de <span class="hl">Partida</span></h2>
+    <p class="sub">R. Antônio Ayrosa, 714 — Vila dos Remédios, SP · Raio de até 6km</p>
+    <div style="border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--gy3);height:380px;position:relative;">
+      <div style="position:absolute;top:14px;left:14px;background:#111;color:#fff;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;z-index:10;">📍 <span style="color:var(--or)">Pet da Vila</span> — Vila dos Remédios, SP</div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.042!2d-46.72706!3d-23.51283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef80d7e1ad22f%3A0x7c7e5a7b7e6f5c7d!2sR.+Ant%C3%B4nio+Ayrosa%2C+714+-+Vila+dos+Rem%C3%A9dios%2C+S%C3%A3o+Paulo!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none;"></iframe>
+    </div>
+  </div></section>
+
+  <!-- CONSULTA DE OUTROS BAIRROS EM FUNDO CLARO -->
+  <section class="sec" style="text-align:center; background:#fff;">
+    <div class="cnt">
+      <span class="eye">Outras Regiões</span>
+      <h2 class="h2" style="margin-bottom:10px">Não encontrou seu <span class="hl">bairro?</span></h2>
+      <p style="color:var(--tx2);font-size:15px;margin-bottom:26px;max-width:480px;margin-left:auto;margin-right:auto">Entre em contato. Dependendo da região, conseguimos verificar a disponibilidade de transporte.</p>
+      <button class="bp lg" onclick="wa('Olá! Quero saber se vocês atendem meu bairro com Táxi Dog!')">Consultar Disponibilidade</button>
+      <p style="color:var(--tx3);font-size:13px;margin-top:18px">📞 (11) 96362-3660 · Seg–Sáb: 09h00–18h00</p>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="cnt">
+    <div class="fgrid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div class="fbrand">
+        <div class="flogo" style="display: flex; align-items: center; gap: 8px;">
+          <div style="background:var(--or); width:28px; height:28px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:14px;">🐾</div>
+          PET DA VILA
+        </div>
+        <p>Cuidado de excelência e carinho para cães e gatos em São Paulo.<br/>Desde 2014 em Vila dos Remédios.</p>
+        <a href="https://instagram.com/petdavila2023" target="_blank" class="fsoc" style="margin-top:10px;">📷 @petdavila2023</a>
+      </div>
+      <div class="fct" style="text-align: right; display:flex; flex-direction:column; justify-content:center;">
+        <p>📍 R. Antônio Ayrosa, 714 · Vila dos Remédios, SP</p>
+        <p>📞 <a href="tel:11963623660" style="color:var(--or); font-weight:800;">(11) 96362-3660</a></p>
+        <table class="ftbl" style="margin-top: 10px; width: 100%; max-width: 250px; margin-left: auto;">
+          <tr><td style="text-align:left;">Seg–Sáb</td><td style="color:var(--or);">09:00 – 18:00</td></tr>
+          <tr><td style="text-align:left;">Domingo</td><td style="color:var(--re);">Fechado</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="fbot" style="border-top:1px solid rgba(255,255,255,.07); padding-top:18px; text-align:center; margin-top:20px;">
+      <p>© 2025 Pet da Vila Centro de Estética Animal Ltda. CNPJ: 20.946.310/0001-00 | Banho e Tosa em São Paulo</p>
+    </div>
+  </div>
+</footer>
+
+<button onclick="wa()" class="wf" aria-label="Fale Conosco no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 56px; height: 56px; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));">
+    <defs>
+      <!-- Gradiente radial de verde brilhante premium -->
+      <radialGradient id="wppRadialFloat" cx="30%" cy="30%" r="70%">
+        <stop offset="0%" stop-color="#4ae36d" />
+        <stop offset="100%" stop-color="#14ab34" />
+      </radialGradient>
+    </defs>
+    <!-- Camada 1: Círculo externo de fundo verde oficial -->
+    <circle cx="12" cy="12" r="12" fill="url(#wppRadialFloat)"/>
+    <!-- Camada 2: Balão de diálogo em Branco Sólido (base) -->
+    <path fill="#fff" d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.452 3.41 1.25 4.869L2 22l5.299-1.39a9.92 9.92 0 0 0 4.713.41c5.506 0 9.988-4.482 9.988-9.988S17.518 2 12.012 2z"/>
+    <!-- Camada 3: Ícone do telefone interno em Verde Oficial no topo (Perfeição Geométrica Garantida!) -->
+    <path fill="#14ab34" d="M16.387 16.152c-.255.74-.881 1.34-1.571 1.54-.531.15-1.218.18-3.15-.55-2.41-.91-4.04-3.23-4.16-3.39-.121-.16-1-1.32-1-2.52 0-1.2.62-1.79.84-2.03.22-.24.49-.3.66-.3h.47c.15 0 .36-.01.55.4.2.43.68 1.66.74 1.79.06.13.1.28.01.46-.09.18-.21.3-.41.52l-.4.47c-.14.16-.29.33-.12.63.34.6 1.52 2.47 2.74 3.52.88.76 1.63 1.01 1.94 1.13.3.12.48.06.66-.14.18-.2.78-.9 1-1.21.22-.31.44-.26.74-.15.3.11 1.91.9 2.24 1.06.33.16.55.24.63.38.08.14.08.8-.18 1.54z"/>
+  </svg>
+</button>
+
+<script>
+// === UTILS ===
+function wa(msg){window.open('https://wa.me/5511963623660'+(msg?'?text='+encodeURIComponent(msg):''),'_blank');}
+
+// === ROUTER ===
+let curP='inicio';
+const PAGE_MAP={
+  'inicio':'pg-inicio','quem-somos':'pg-quem-somos','servicos':'pg-servicos',
+  'blog':'pg-blog','artigo':'pg-artigo','contato':'pg-contato','taxi-dog':'pg-taxi-dog'
+};
+const NAV_LABELS={
+  'inicio':'Início','quem-somos':'Quem','servicos':'Serviç','blog':'Blog',
+  'taxi-dog':'Táxi','contato':'Contato'
+};
+
+function goTo(page,artId){
+  // Ocultar todas as páginas
+  Object.values(PAGE_MAP).forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.classList.remove('active');
+  });
+  // Mostrar a página alvo
+  const target=document.getElementById(PAGE_MAP[page]||'pg-inicio');
+  if(target) target.classList.add('active');
+  curP=page;
+  
+  // Atualizar barra de navegação
+  document.querySelectorAll('.nav-btn').forEach(b=>{
+    b.classList.toggle('active',b.textContent.trim().startsWith(NAV_LABELS[page]||'__'));
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+  
+  // Aplicar estilo inicial de cabeçalho dinâmico para a nova rota
+  updateNavbarStyle();
+  
+  // Inicialização de páginas específicas
+  if(page==='blog' && document.getElementById('blogGrid').children.length===0) renderBlog();
+  if(page==='artigo' && artId) renderArt(artId);
+  if(page==='taxi-dog') initTdSearch();
+  if(page==='inicio'){
+    initPaws();
+    if(!document.getElementById('cfTrack').children.length) buildCF();
+    if(!document.getElementById('revTrack').children.length) buildRevCF();
+  }
+  // Fechar menu móvel
+  document.getElementById('nl').classList.remove('open');
+  document.getElementById('hb').textContent='☰';
+}
+
+// === CONTROLADOR DE ESTILO DO CABEÇALHO (TRANSPARÊNCIA DINÂMICA) ===
+function updateNavbarStyle(){
+  const navBar = document.getElementById('nb');
+  if(!navBar) return;
+  const pagesWithVideo = ['inicio', 'taxi-dog'];
+  
+  // Se for uma página com vídeo de fundo no cabeçalho (Início ou Táxi Dog)
+  if(pagesWithVideo.includes(curP)){
+    if(window.scrollY > 50){
+      navBar.classList.add('scrolled');
+    } else {
+      navBar.classList.remove('scrolled');
+    }
+  } else {
+    // Se for uma página padrão clara (Quem Somos, Serviços, Blog, Contato)
+    navBar.classList.add('scrolled');
+  }
+}
+
+// Scroll Event Listener
+window.addEventListener('scroll', updateNavbarStyle);
+
+const hbBtn = document.getElementById('hb');
+const navLinksEl = document.getElementById('nl');
+
+hbBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navLinksEl.classList.toggle('open');
+  hbBtn.textContent = navLinksEl.classList.contains('open') ? '✕' : '☰';
+});
+
+// Fechar menu de forma inteligente ao clicar fora dele
+document.addEventListener('click', (e) => {
+  if (navLinksEl.classList.contains('open') && !e.target.closest('#nl') && !e.target.closest('#hb')) {
+    navLinksEl.classList.remove('open');
+    hbBtn.textContent = '☰';
+  }
+});
+
+// === PAWS ===
+function initPaws(){
+  const c=document.getElementById('pawsC');
+  if(!c||c.children.length>0)return;
+  ['🐾','🐾','🐾','❤️','🐶','🐱'].forEach(p=>{
+    for(let i=0;i<3;i++){
+      const el=document.createElement('div');
+      el.className='paw-p';el.textContent=p;
+      el.style.cssText=`left:${Math.random()*100}%;font-size:${12+Math.random()*14}px;animation-duration:${10+Math.random()*14}s;animation-delay:${Math.random()*12}s;`;
+      c.appendChild(el);
+    }
+  });
+}
+
+// === COVERFLOW DE SERVIÇOS ===
+const CF_CARDS=[
+  {bg:'cf-bg1',ico:'🛁',img:'banho-cao.jpg',title:'Banho para Cães',sub:'Shampoo premium, secagem profissional e perfumação',wpp:'Quero agendar banho para meu cão!'},
+  {bg:'cf-bg2',ico:'🐱',img:'banho-gato.jpg',title:'Banho para Gatos',sub:'Técnica especializada em felinos com calma e segurança',wpp:'Quero agendar banho para meu gato!'},
+  {bg:'cf-bg3',ico:'✂️',img:'tosa-raca.jpg',title:'Tosa da Raça',sub:'Padrão oficial para Yorkshire, Poodle, Schnauzer e mais',wpp:'Quero agendar tosa da raça!'},
+  {bg:'cf-bg4',ico:'✂️',img:'tosa-higienica-cao.jpg',title:'Tosa Higiênica',sub:'Remove pelo das regiões íntimas, patas e face',wpp:'Quero agendar tosa higiênica!'},
+  {bg:'cf-bg5',ico:'🚗',img:'taxi-dog.jpg',title:'Táxi Dog SP',sub:'Buscamos e levamos seu pet — raio de até 6km',wpp:'Quero o serviço de Táxi Dog!'},
+  {bg:'cf-bg6',ico:'💧',img:'hidratacao-cao.jpg',title:'Hidratação',sub:'Pelo macio, brilhoso e saudável — resultado imediato',wpp:'Quero agendar hidratação de pelagem!'},
+  {bg:'cf-bg7',ico:'🌀',img:'remocao-subpelo.jpg',title:'Subpelo',sub:'Husky, Golden, Border: remoção profissional',wpp:'Quero agendar remoção de subpelo!'},
+  {bg:'cf-bg8',ico:'🦷',img:'limpeza-ouvidos.jpg',title:'Higiene Completa',sub:'Unhas, ouvidos, escovação dental e higienização',wpp:'Quero agendar higiene completa!'},
+  {bg:'cf-bg9',ico:'💊',img:'banho-medicinal.jpg',title:'Banho Medicinal',sub:'Para alergias, fungos e problemas de pele',wpp:'Quero agendar banho medicinal!'},
+];
+
+let cfCur=0;
+const CF_POS=['pos-hid','pos-l2','pos-l1','pos-c','pos-r1','pos-r2','pos-hidr'];
+
+function buildCF(){
+  const track=document.getElementById('cfTrack');
+  const dots=document.getElementById('cfDots');
+  if(!track||!dots)return;
+  track.innerHTML='';
+  dots.innerHTML='';
+  CF_CARDS.forEach((d,i)=>{
+    const card=document.createElement('div');
+    card.className=`cf-card ${d.bg}`;
+    card.innerHTML=`<div class="cf-inner">
+      <div class="cf-top">
+        <span class="cf-fallback-icon">${d.ico}</span>
+        <img src="imagens/${d.img}" alt="${d.title}" onerror="this.style.display='none';">
+      </div>
+      <div class="cf-body">
+        <div>
+          <h3>${d.title}</h3>
+          <p>${d.sub}</p>
+        </div>
+        <button class="cf-btn" onclick="event.stopPropagation();wa('${d.wpp}')">Reservar Horário</button>
+      </div>
+    </div>`;
+    card.addEventListener('click',()=>{const diff=(i-cfCur+CF_CARDS.length)%CF_CARDS.length;if(diff===1)cfNext();else if(diff===CF_CARDS.length-1)cfPrev();});
+    track.appendChild(card);
+    const dot=document.createElement('span');
+    dot.className='cfdot'+(i===0?' on':'');
+    dot.addEventListener('click',()=>cfGo(i));
+    dots.appendChild(dot);
+  });
+  updateCF();
+}
+
+function updateCF(){
+  const cards=document.querySelectorAll('#cfTrack .cf-card');
+  const dots=document.querySelectorAll('#cfDots .cfdot');
+  const n=CF_CARDS.length;
+  cards.forEach((c,i)=>{
+    c.className=`cf-card ${CF_CARDS[i].bg}`;
+    const diff=(i-cfCur+n)%n;
+    if(diff===0)c.classList.add('pos-c');
+    else if(diff===1)c.classList.add('pos-r1');
+    else if(diff===2)c.classList.add('pos-r2');
+    else if(diff===n-1)c.classList.add('pos-l1');
+    else if(diff===n-2)c.classList.add('pos-l2');
+    else c.classList.add(i<cfCur?'pos-hid':'pos-hidr');
+  });
+  dots.forEach((d,i)=>d.classList.toggle('on',i===cfCur));
+}
+function cfNext(){cfCur=(cfCur+1)%CF_CARDS.length;updateCF();}
+function cfPrev(){cfCur=(cfCur-1+CF_CARDS.length)%CF_CARDS.length;updateCF();}
+function cfGo(i){cfCur=i;updateCF();}
+setInterval(()=>{if(curP==='inicio')cfNext();},5000);
+
+// === REVIEWS ===
+const REVS=[
+  {name:'Maria Silva',pet:'Tutora do Max 🐶',text:'"Meu cachorro sempre volta feliz e cheiroso! Profissionais muito atenciosos. Melhor pet shop de banho e tosa da Vila dos Remédios!"'},
+  {name:'João Pereira',pet:'Tutor da Luna 🐩',text:'"O táxi dog é incrível! A tosa ficou perfeita. Melhor banho e tosa em São Paulo que já encontrei."'},
+  {name:'Ana Costa',pet:'Tutora da Mel 🐱',text:'"Minha gata saiu linda e sem estresse. Banho para gatos em SP top! Só levo aqui."'},
+  {name:'Carlos Mendes',pet:'Tutor do Thor 🐕',text:'"Atendimento top, preço justo. Já sou cliente do Pet da Vila há mais de 2 anos!"'},
+  {name:'Patricia Lima',pet:'Tutora da Bella 🐕',text:'"A tosa da raça ficou incrível! O Pet da Vila é referência em tosa profissional em SP."'},
+  {name:'Roberto Santos',pet:'Tutor do Rex 🐶',text:'"Táxi dog em São Paulo excelente! Rex voltou amando. Já agendei o próximo banho."'},
+  {name:'Fernanda Rocha',pet:'Tutora da Nala 🐱',text:'"Banho para gato que funciona! Minha gata saiu tranquila e cheirosa. Super recomendo!"'},
+  {name:'Eduardo Dias',pet:'Tutor do Buddy 🐩',text:'"A hidratação de pelagem transformou os pelos do meu cachorro. Resultado incrível!"'},
+];
+const RPOS=['rpos-hid','rpos-l2','rpos-l1','rpos-c','rpos-r1','rpos-r2','rpos-hidr'];
+let revCur=0;
+function buildRevCF(){
+  const track=document.getElementById('revTrack');
+  const dots=document.getElementById('revDots');
+  if(!track||!dots)return;
+  track.innerHTML='';
+  dots.innerHTML='';
+  REVS.forEach((r,i)=>{
+    const card=document.createElement('div');
+    card.className='rev-card';
+    card.innerHTML=`<div class="rev-stars">⭐⭐⭐⭐Base</div><p class="rev-txt">${r.text}</p><div class="rev-auth"><div class="rev-av">${r.name[0]}</div><div><div class="rev-name">${r.name}</div><div class="rev-pet">${r.pet}</div></div></div>`;
+    card.addEventListener('click',()=>{const d=(i-revCur+REVS.length)%REVS.length;if(d===1)revNext();else if(d===REVS.length-1)revPrev();});
+    track.appendChild(card);
+    const dot=document.createElement('span');
+    dot.className='cfdot'+(i===0?' on':'');
+    dot.addEventListener('click',()=>revGo(i));
+    dots.appendChild(dot);
+  });
+  updateRev();
+}
+function updateRev(){
+  const cards=document.querySelectorAll('#revTrack .rev-card');
+  const dots=document.querySelectorAll('#revDots .cfdot');
+  const n=REVS.length;
+  cards.forEach((c,i)=>{
+    c.className='rev-card';
+    const diff=(i-revCur+n)%n;
+    if(diff===0)c.classList.add('rpos-c');
+    else if(diff===1)c.classList.add('rpos-r1');
+    else if(diff===2)c.classList.add('rpos-r2');
+    else if(diff===n-1)c.classList.add('rpos-l1');
+    else if(diff===n-2)c.classList.add('rpos-l2');
+    else c.classList.add(i<revCur?'rpos-hid':'rpos-hidr');
+  });
+  dots.forEach((d,i)=>d.classList.toggle('on',i===revCur));
+}
+function revNext(){revCur=(revCur+1)%REVS.length;updateRev();}
+function revPrev(){revCur=(revCur-1+REVS.length)%REVS.length;updateRev();}
+function revGo(i){revCur=i;updateRev();}
+setInterval(()=>{if(curP==='inicio')revNext();},5500);
+
+// === TOUCH / SWIPE CONTROLS ===
+function setupSwipe(trackId, onLeft, onRight) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  let startX = 0;
+  let endX = 0;
+  
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+  
+  track.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  }, { passive: true });
+  
+  track.addEventListener('touchend', () => {
+    const threshold = 50; 
+    const diff = startX - endX;
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        onLeft(); 
+      } else {
+        onRight(); 
+      }
+    }
+  });
+}
+
+setupSwipe('cfTrack', cfNext, cfPrev);
+setupSwipe('revTrack', revNext, revPrev);
+
+// === SERVICES FILTER ===
+function fSrv(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.srv-card').forEach(c=>{c.style.display=(cat==='todos'||c.dataset.cat===cat)?'':'none';});
+}
+
+// === BLOG ===
+const ARTS=[
+  {
+    id:'hidratacao',
+    tag:'Hidratação SP',
+    ico:'💧',
+    title:'Hidratação de pelagem para cães: sinais e benefícios em SP',
+    desc:'Muitos tutores acreditam que o banho regular é suficiente para manter a pelagem do pet bonita, mas a verdade é que a hidratação de pelagem para cães em São Paulo desempenha um papel crucial para a saúde dermatológica do animal. Especialmente em climas secos ou no inverno da capital paulista, a pele e os pelos dos cães sofrem com a perda de umidade natural, tornando a hidratação profunda essencial. Se você tem notado que o pelo do seu pet está áspero, sem brilho, embaraçando com facilidade ou apresentando queda excessiva, estes são sinais de que ele precisa de cuidados extras.',
+    time:'8 min',
+    body:`<p>Muitos tutores acreditam que o banho regular é suficiente para manter a pelagem do pet bonita, mas a verdade é que a **hidratação de pelagem para cães em São Paulo** desempenha um papel crucial para a saúde dermatológica do animal. Especialmente em climas secos ou no inverno da capital paulista, a pele e os pelos dos cães sofrem com a perda de umidade natural, tornando a hidratação essencial.</p>
+    <p>Se você tem notado que o pelo do seu pet está áspero, sem brilho, embaraçando com muita facilidade ou com queda excessiva, estes são sinais claros de que ele precisa de um tratamento restaurador profundo. Em nosso espaço de <button class="inline-route-link" onclick="goTo('servicos')">estética e hidratação pet</button>, utilizamos produtos com tecnologia cosmética veterinária premium para devolver os nutrientes e a água que a fibra capilar do animal perde no dia a dia.</p>
+    <p>Os benefícios da hidratação vão muito além da estética: ela previne a quebra dos fios, auxilia na remoção de nós sem causar dor ao animal, protege contra o ressecamento que causa coceira e mantém a barreira protetora da pele integra contra fungos e bactérias. O resultado é imediato — pelagem incrivelmente macia, cheirosa e com um brilho espetacular que dura muito mais tempo.</p>
+    <p>Recomendamos que a hidratação seja realizada a cada 15 ou 30 dias, dependendo do tipo de pelo e da raça do seu companheiro de quatro patas. Fale com um de nossos esteticistas profissionais no Pet da Vila e agende uma sessão de spa para transformar a saúde capilar do seu pet.</p>`
+  },
+  {
+    id:'corte-unhas',
+    tag:'Higiene Animal SP',
+    ico:'💅',
+    title:'Corte de unhas para cães em São Paulo: por que é essencial',
+    desc:'O corte de unhas para cães em São Paulo é um dos aspectos de higiene mais negligenciados pelos tutores, mas tem um impacto profundo na saúde ortopédica e no conforto do animal. Quando as unhas crescem além do limite ideal, elas tocam o chão de forma contínua, forçando o pet a alterar sua postura natural para caminhar, o que pode causar dores articulares severas e desvios posturais a longo prazo. Além disso, unhas muito compridas podem se curvar e penetrar nos coxins (as almofadinhas das patas), gerando ferimentos dolorosos e infecções.',
+    time:'6 min',
+    body:`<p>O **corte de unhas para cães em São Paulo** é um dos aspectos de higiene mais negligenciados pelos tutores, mas tem um impacto profundo na saúde ortopédica e no conforto do animal. Quando as unhas crescem além do limite ideal, elas tocam o chão de forma contínua, forçando o pet a alterar sua postura natural para caminhar, o que pode causar dores articulares severas a longo prazo.</p>
+    <p>Além dos desvios posturais, unhas muito compridas podem se curvar e penetrar nos coxins (as almofadinhas das patas), gerando ferimentos inflamados, infecções dolorosas e extrema dificuldade de locomoção. Há também o risco de a unha se prender em tapetes ou pisos e rasgar, causando sangramentos intensos e desespero tanto no pet quanto no tutor.</p>
+    <p>No Pet da Vila, realizamos o corte de unhas e o lixamento de forma extremamente segura e profissional, incluído em nossos <button class="inline-route-link" onclick="goTo('servicos')">serviços completos de higiene</button>. Nossos profissionais possuem o treinamento técnico necessário para identificar a "veia rápida" da unha do pet, evitando sangramentos e desconforto durante o procedimento.</p>
+    <p>A frequência ideal para o corte de unhas varia de acordo com o estilo de vida do cão — pets que passeiam muito em pisos ásperos como asfalto tendem a gastar as unhas naturalmente, enquanto cães de apartamento precisam de manutenção a cada 15 ou 20 dias. Traga seu amigo para uma avaliação de rotina e garanta patas sempre saudáveis.</p>`
+  },
+  {
+    id:'subpelo',
+    tag:'Subpelo São Paulo',
+    ico:'🌀',
+    title:'Remoção de subpelo em SP: raças que precisam',
+    desc:'Muitas raças de cães possuem o que chamamos de pelagem dupla, composta pelo pelo de cobertura e pelo subpelo (uma subcamada de pelos finos e densos que serve para isolamento térmico). A remoção de subpelo em São Paulo é um tratamento de higiene indispensável para raças como Golden Retriever, Border Collie, Husky Siberiano, Chow Chow, Akita e Pastor Alemão. Em uma metrópole com clima instável e abafado como o de São Paulo, o subpelo que morre e não é removido se acumula junto à pele do animal, criando umidade e retenção.',
+    time:'8 min',
+    body:`<p>Muitas raças de cães possuem o que chamamos de pelagem dupla, composta pelo pelo de cobertura e pelo subpelo (uma subcamada de pelos finos e densos que serve para isolamento térmico). A **remoção de subpelo em São Paulo** é um tratamento de higiene indispensável para raças como Golden Retriever, Border Collie, Husky Siberiano, Chow Chow, Akita, Pastor Alemão, entre outros.</p>
+    <p>Em uma metrópole com clima instável e abafado como o de São Paulo, o subpelo que morre e não é removido se acumula junto à pele do animal, criando uma barreira compacta que retém umidade, impede a ventilação natural e propicia um ambiente perfeito para a proliferação de fungos, bactérias e dermatites severas.</p>
+    <p>Ao realizar a remoção de subpelo periódica no Pet da Vila, ajudamos a manter o isolamento térmico natural do animal (tanto para o frio quanto para o calor), além de diminuir drasticamente a quantidade de pelos soltos espalhados pela sua casa e sofás em até 80%. O procedimento é realizado com escovas especiais importadas, com técnicas gentis que não machucam nem puxam a pele do cão.</p>
+    <p>Se você tem um cão de pelagem dupla e sofre com a quantidade de pelos mortos pela casa, consulte nossos especialistas em estética animal. Oferecemos este serviço com toda a perícia para garantir o bem-estar e o frescor que seu pet merece.</p>`
+  },
+  {
+    id:'banho-medicinal',
+    tag:'Banho Medicinal SP',
+    ico:'💊',
+    title:'Banho medicinal para cães em São Paulo: o que é?',
+    desc:'O banho medicinal para cães em São Paulo é um procedimento terapêutico de suporte indicado para o tratamento de diversas patologias dermatológicas, tais como alergias, dermatites atópicas, infecções bacterianas, seborreias, caspas e infestações de fungos. Ele deve ser encarado como um complemento de higiene indispensável ao tratamento prescrito pelo médico veterinário. Diferentemente do banho convencional, o banho medicinal utiliza shampoos e loções terapêuticas que exigem tempo de contato exato com a pele.',
+    time:'7 min',
+    body:`<p>O **banho medicinal para cães em São Paulo** é um procedimento terapêutico de suporte indicado para o tratamento de diversas patologias dermatológicas, tais como alergias, dermatites atópicas, infecções bacterianas, seborreias, caspas e infestações de fungos. Ele deve ser encarado como um complemento de higiene indispensável ao tratamento prescrito pelo médico veterinário.</p>
+    <p>Diferentemente do banho convencional, o banho medicinal utiliza shampoos e loções terapêuticas específicas, que exigem tempo de contato exato com a pele do pet (geralmente de 10 a 15 minutos) para que os princípios ativos façam o efeito desejado na derme do animal.</p>
+    <p>A correta aplicação e a secagem profissional são essenciais para o sucesso do tratamento. No Pet da Vila, nossa equipe é altamente capacitada para realizar a aplicação precisa de tratamentos dermatológicos, garantindo que a água esteja na temperatura ideal para não irritar a pele sensível e que a secagem seja feita com sopradores frios ou mornos de forma a evitar queimaduras ou aumento da coceira.</p>
+    <p>Se o seu melhor amigo está sofrendo com problemas de pele persistentes, traga a receita veterinária e agende uma sessão de banho terapêutico conosco. Cuidamos da pele e do bem-estar do seu pet com toda a segurança e respeito que ele necessita.</p>`
+  },
+  {
+    id:'escolher-petshop',
+    tag:'Pet Shop SP',
+    ico:'🏆',
+    title:'Como escolher o melhor banho e tosa em São Paulo',
+    desc:'Encontrar um espaço confiável para cuidar da higiene do seu companheiro de quatro patas pode parecer uma tarefa difícil em uma cidade tão grande. Para ajudar na sua escolha, listamos os principais fatores que você deve avaliar ao escolher um banho e tosa em São Paulo, garantindo uma experiência tranquila e livre de estresse para seu animal de estimação. Em primeiro lugar, verifique a qualificação técnica dos profissionais. Tosadores experientes entendem sobre comportamento animal e sabem realizar manuseios gentis.',
+    time:'9 min',
+    body:`<p>Encontrar um espaço confiável para cuidar da higiene do seu companheiro de quatro patas pode parecer uma tarefa difícil em uma cidade tão grande. Para ajudar na sua escolha, listamos os principais fatores que você deve avaliar ao escolher um **banho e tosa em São Paulo**, garantindo uma experiência tranquila e livre de estresse para seu animal de estimação.</p>
+    <p>Em primeiro lugar, verifique a qualificação técnica dos profissionais. Tosadores experientes entendem sobre comportamento animal e sabem realizar manuseios gentis. Em segundo lugar, observe o ambiente físico: ele deve ser limpo, arejado, bem iluminado e contar com equipamentos modernos e seguros de secagem.</p>
+    <p>Outro ponto crucial é a transparência. Um bom centro de estética animal permite que você conheça as instalações e tire todas as suas dúvidas sobre os produtos e procedimentos utilizados. No Pet da Vila, localizado em Vila dos Remédios, temos orgulho de manter um padrão rigoroso de higiene e de oferecer atendimento com hora marcada para evitar que os animais fiquem esperando em gaiolas.</p>
+    <p>Por fim, consulte as avaliações no Google de outros tutores na região. A reputação positiva de um estabelecimento é o melhor indicador do amor e do cuidado que seu pet receberá durante a sua estadia. Se você busca o melhor para o seu amigo, agende uma visita ao nosso espaço de <button class="inline-route-link" onclick="goTo('quem-somos')">estética animal do Pet da Vila</button> e sinta a diferença.</p>`
+  },
+  {
+    id:'escovacao-dental',
+    tag:'Saúde Bucal SP',
+    ico:'🦷',
+    title:'Escovação dental para cães em São Paulo: hábito essencial',
+    desc:'A escovação dental para cães em São Paulo vai muito além da manutenção de um hálito fresco — ela é um pilar fundamental para a prevenção de doenças sistêmicas graves. Assim como nós, os cães acumulam resíduos de alimentos nos dentes, o que propicia a formação da placa bacteriana e, posteriormente, do cálculo dentário (o famoso tártaro). Se o tártaro não for conhecido, ele pode causar inflamação gengival severa (gengivite), perda de dentes e migração de bactérias nocivas para órgãos vitais.',
+    time:'6 min',
+    body:`<p>A **escovação dental para cães em São Paulo** vai muito além da manutenção de um hálito fresco — ela é um pilar fundamental para a prevenção de doenças sistêmicas graves. Assim como nós, os cães acumulam resíduos de alimentos nos dentes, o que propicia a formação da placa bacteriana e, posteriormente, do cálculo dentário (o famoso tártaro).</p>
+    <p>Se o tártaro não for controlado, ele pode causar inflamação gengival severa (gengivite), perda de dentes e, de forma ainda mais preocupante, as bactérias da boca podem entrar na corrente sanguínea do pet e se alojar em órgãos vitais como o coração, fígado e rins, causando infecções graves e encurtando a expectativa de vida do animal.</p>
+    <p>No Pet da Vila, entendemos a seriedade deste cuidado e oferecemos a escovação dental profissional como parte de nossos cuidados periódicos de higiene pet. Nossos esteticistas realizam a limpeza bucal utilizando escovas especiais e pastas de dentes de uso exclusivamente veterinário (com sabores atraentes para que o procedimento seja o mais agradável possível para o animal).</p>
+    <p>Para manter a saúde bucal do seu melhor amigo em dia, a escovação dental deve ser um hábito diário em casa, complementado por limpezas profissionais periódicas no pet shop. Fale com nossa equipe e adicione este cuidado essencial na rotina de agendamentos do seu pet.</p>`
+  }
+];
+
+function renderBlog(){
+  const g=document.getElementById('blogGrid');
+  if(!g)return;
+  g.innerHTML=ARTS.map((a,i)=>`
+    <div class="blog-card" onclick="goTo('artigo','${a.id}')">
+      <div class="blog-body">
+        <div>
+          <span style="font-size:11px; font-weight:800; color:var(--or); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; display:block;">${a.tag}</span>
+          <h3 style="margin-top:4px;">${a.title}</h3>
+          <p style="margin-top:12px;">${a.desc}</p>
+        </div>
+        <div class="blog-meta" style="display:flex;justify-content:space-between;align-items:center;">
+          <span>| 🕐 ${a.time} de leitura</span>
+          <span class="blog-rm">Ler artigo →</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderArt(id){
+  const a=ARTS.find(x=>x.id===id);
+  if(!a)return;
+  const c=document.getElementById('artContent');
+  if(!c)return;
+  c.innerHTML=`
+    <nav class="bc" style="justify-content:flex-start;margin-bottom:16px">
+      <button onclick="goTo('inicio')">Início</button><span>/</span>
+      <button onclick="goTo('blog')">Blog</button><span>/</span><span>${a.tag}</span>
+    </nav>
+    <span class="art-tag">${a.tag}</span>
+    <h1 class="art-h1">${a.title}</h1>
+    <div class="art-meta"><span>📅 2025</span><span>🕐 ${a.time} de leitura</span><span>✍️ Pet da Vila SP</span></div>
+    <div class="art-body">${a.body}</div>
+    <div class="art-cta"><h3>Agende Banho e Tosa em São Paulo!</h3><p>Seg–Sáb 09h00–18h00 • Vila dos Remédios, SP</p><button class="bp" onclick="wa('Quero agendar banho e tosa!')">Reservar Horário</button></div>
+    <div class="art-rel"><h3>Leia também:</h3>${ARTS.filter(x=>x.id!==id).slice(0,3).map(x=>`<button onclick="goTo('artigo','${x.id}')">→ ${x.title}</button>`).join('')}</div>`;
+}
+
+// === TAXI DOG SEARCH ===
+const TD_BAIRROS=['Vila dos Remédios','Vila Jaguara','Vila Mangalot','Jardim Santo Elias','Parque São Domingos','City América','Vila Piauí','Chácara São João','Parque Maria Domitila','Vila Boaçava','Jardim Mangalot','Vila Jaraguá','Jardim Mutinga','Vila Renk','Vila Figueira','Vila Santa Edwiges','Jardim Marisa'];
+function tdNorm(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();}
+function tdSearch(val){
+  const res=document.getElementById('tdResult');
+  const sugg=document.getElementById('tdSugg');
+  if(!res||!sugg)return;
+  if(!val||val.length<2){res.className='td-result';res.innerHTML='';sugg.style.display='none';return;}
+  const q=tdNorm(val);
+  const matches=TD_BAIRROS.filter(b=>tdNorm(b).includes(q));
+  if(matches.length>0){
+    sugg.innerHTML=matches.map(b=>`<div class="td-sugg-item" onclick="tdSel('${b}')">📍 ${b}</div>`).join('');
+    sugg.style.display='block';
+    res.className='td-result found';
+    res.innerHTML=`✅ <strong>${matches[0]}</strong> — Atendemos! <button onclick="wa('Quero agendar Táxi Dog para ${matches[0]}!')">Agendar</button>`;
+  } else {
+    sugg.style.display='none';
+    res.className='td-result nofound';
+    res.innerHTML=`❌ Bairro não encontrado. <button onclick="wa('Quero saber se atendem meu bairro: ${val}')">Consultar no WhatsApp</button>`;
+  }
+  document.querySelectorAll('.bcard').forEach(c=>{
+    const n=c.querySelector('.bcard-name')?.textContent||'';
+    c.style.outline=tdNorm(n).includes(q)?'2px solid var(--or)':'';
+  });
+}
+function tdSel(name){const inp=document.getElementById('tdInput');if(inp)inp.value=name;document.getElementById('tdSugg').style.display='none';tdSearch(name);}
+function initTdSearch(){
+  const inp=document.getElementById('tdInput');
+  if(!inp||inp.dataset.init)return;
+  inp.dataset.init='1';
+  inp.addEventListener('input',function(){tdSearch(this.value);});
+  inp.addEventListener('blur',function(){setTimeout(()=>{const s=document.getElementById('tdSugg');if(s)s.style.display='none';},200);});
+  inp.addEventListener('focus',function(){tdSearch(this.value);});
+}
+document.addEventListener('click',e=>{if(!e.target.closest('.td-search-wrap')){const s=document.getElementById('tdSugg');if(s)s.style.display='none';}});
+
+// === INIT ===
+goTo('inicio');
+</script>
+</body>
+</html>
