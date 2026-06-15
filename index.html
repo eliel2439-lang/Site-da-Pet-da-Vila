@@ -3,9 +3,60 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Pet da Vila – Banho e Tosa em São Paulo | Vila dos Remédios</title>
-<meta name="description" content="Pet da Vila: banho e tosa profissional para cães e gatos, táxi dog em São Paulo, Vila dos Remédios. Desde 2014. (11) 96362-3660."/>
+<title>Banho e Tosa na Vila dos Remédios, SP | Pet da Vila</title>
+<meta name="description" content="Estética canina e felina com banho e tosa na Vila dos Remédios, São Paulo. Táxi Dog seguro para cães e gatos na Zona Oeste de SP. Agende seu horário!"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+
+<!-- CONFIGURAÇÕES DE FAVICON PARA GOOGLE SERP -->
+<link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="imagens/favicon.png"/>
+<link rel="apple-touch-icon" href="imagens/favicon.png"/>
+
+<!-- DADOS ESTRUTURADOS GOOGLE (JSON-LD SCHEMA) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pet da Vila",
+  "image": "https://www.petdavila.com.br/imagens/logo.png",
+  "logo": "https://www.petdavila.com.br/imagens/logo.png",
+  "url": "https://www.petdavila.com.br",
+  "telephone": "+55-11-96362-3660",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Antônio Ayrosa, 714",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "05103-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -23.51283,
+    "longitude": -46.72706
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://instagram.com/petdavila2023"
+  ]
+}
+</script>
+
 <style>
 :root{
   --or:#FF8C00;--or2:#FFA733;--or3:#CC6E00;
@@ -30,6 +81,7 @@ ul{list-style:none;}
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;align-items:center;padding:0 24px;background:transparent;border-bottom:1px solid rgba(255,255,255,.1);transition:var(--tr);}
 .nav-inner{max-width:1200px;width:100%;margin:0 auto;display:flex;align-items:center;}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;margin-right:auto;}
+.nav-logo-img{height:40px;width:auto;object-fit:contain;}
 .nav-logo-dot{width:38px;height:38px;background:var(--or);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;border:2px solid var(--re);overflow:hidden;}
 .nav-logo-txt{font-family:'Bebas Neue',cursive;font-size:20px;color:#fff;letter-spacing:2px;transition:var(--tr);}
 .nav-links{display:flex;align-items:center;gap:2px;}
@@ -51,7 +103,7 @@ ul{list-style:none;}
 .pg.active{display:block;}
 
 /* BTNs */
-.bp{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);box-shadow:0 4px 18px rgba(255,140,0,.35);}
+.bp{display:inline-flex;align-items:center;gap:8px;background:var(--or);color:#fff;font-weight:800;font-size:15px;padding:13px 28px;border-radius:50px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);box-shadow:var(--sh);text-align:center;justify-content:center;}
 .bp:hover{background:var(--re);transform:translateY(-2px);}
 .bp.lg{font-size:17px;padding:16px 38px;}
 .bs{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);color:#fff;font-weight:700;font-size:15px;padding:13px 28px;border-radius:50px;border:2px solid rgba(255,255,255,.6);cursor:pointer;font-family:'Nunito',sans-serif;transition:var(--tr);}
@@ -165,7 +217,7 @@ ul{list-style:none;}
 .rev-card{position:absolute;width:250px;min-height:240px;border-radius:var(--r);background:#fff;padding:22px 20px;cursor:pointer;transition:all .5s cubic-bezier(.4,0,.2,1);box-shadow:var(--sh);border:1.5px solid var(--gy3);display:flex;flex-direction:column;justify-content:space-between;}
 .rpos-c{transform:translateX(0) scale(1) rotateY(0deg);z-index:10;box-shadow:0 16px 48px rgba(0,0,0,.15);}
 .rpos-l1{transform:translateX(-190px) scale(.82) rotateY(28deg);z-index:7;filter:brightness(.75);}
-.rpos-r1{transform:translateX(190px) scale(.82) rotateY(-28deg);z-index:7;filter:brightness(.75);}
+.rpos-r1{transform:translateX(190px) scale(-28deg);z-index:7;filter:brightness(.75);}
 .rpos-l2{transform:translateX(-360px) scale(.65) rotateY(42deg);z-index:4;filter:brightness(.5);}
 .rpos-r2{transform:translateX(360px) scale(.65) rotateY(-42deg);z-index:4;filter:brightness(.5);}
 .rpos-hid{transform:translateX(-560px);z-index:1;opacity:0;}
@@ -486,7 +538,9 @@ ul{list-style:none;}
 <nav class="nav" id="nb">
   <div class="nav-inner">
     <div class="nav-logo" onclick="goTo('inicio')">
-      <div class="nav-logo-dot">🐾</div>
+      <!-- Sistema de carregamento inteligente da logo com Fallback automático -->
+      <img src="imagens/logo.png" alt="Pet da Vila" class="nav-logo-img" style="display:none;" onload="this.style.display='block'; document.getElementById('fallback-logo').style.display='none';" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='flex';">
+      <div class="nav-logo-dot" id="fallback-logo">🐾</div>
       <span class="nav-logo-txt">PET DA VILA</span>
     </div>
     <ul class="nav-links" id="nl">
@@ -505,8 +559,9 @@ ul{list-style:none;}
 <!-- ===== INÍCIO ===== -->
 <div class="pg active" id="pg-inicio">
   <section class="hero">
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="videios/hero-video.mp4" type="video/mp4">
+    <!-- Vídeo com ID para controle e detecção de resolução responsiva via JavaScript -->
+    <video autoplay loop muted playsinline class="hero-video" id="heroVideo">
+      <source id="heroSource" src="videios/hero-video.mp4" type="video/mp4">
     </video>
     <div class="hero-ov"></div>
     <div class="hero-glow"></div>
@@ -692,16 +747,19 @@ ul{list-style:none;}
   <section class="ph"><div class="ph-bg"></div><div class="ph-cnt">
     <nav class="bc"><button onclick="goTo('inicio')">Início</button><span>/</span><span>Quem Somos</span></nav>
     <h1>Nossa <span>História</span></h1>
-    <p>Mais de 11 anos cuidando do seu pet com carinho e profissionalismo</p>
+    <p>Desde 2014, cuidando dos pets com amor, dedicação e propósito.</p>
   </div></section>
   <section class="sec"><div class="cnt" style="max-width:760px">
-    <span class="eye" style="text-align:left">Desde 2014</span>
+    <span class="eye" style="text-align:left">Superação e Propósito</span>
     <div class="about-txt">
       <h2>Pet da Vila — <span>Vila dos Remédios, SP</span></h2>
-      <p>Fundado in 2014, o Pet da Vila Centro de Estética Animal nasceu com a missão de oferecer serviços de banho e tosa para cães e gatos com qualidade, segurança e atendimento personalizado.</p>
-      <p>Localizado na Vila dos Remédios, em São Paulo, o Pet da Vila tornou-se referência em banho e tosa, tosa higiênica, tosa na máquina, hidratação de pelagem e serviço de táxi dog para toda a região da Zona Oeste.</p>
-      <p>Ao longo dos anos, conquistamos a confiança de centenas de tutores que procuram um pet shop especializado em estética animal, bem-estar e cuidados para cães e gatos. Trabalhamos para que cada pet receba atenção individual, conforto e uma experiência tranquila durante todo o atendimento.</p>
-      <p>Nosso compromisso é oferecer um ambiente seguro, limpo e preparado para proporcionar o melhor cuidado para seu companheiro de quatro patas, sempre respeitando as características e necessidades de cada animal.</p>
+      <p>O Pet da Vila Centro de Estética Animal nasceu in 2014, na Vila dos Remédios, em São Paulo, com a missão de oferecer serviços de banho e tosa para cães e gatos com qualidade, segurança e atendimento personalizado.</p>
+      <p>Por trás do Pet da Vila existe uma história inspiradora de superação. Seu fundador, Valter, enfrentou um dos maiores desafios de sua vida ao assumir sozinho a criação de seu filho ainda muito pequeno. Enquanto cuidava da educação, do crescimento e do bem-estar do filho, também precisava construir e manter seu negócio funcionando.</p>
+      <p>Com muito esforço, determinação e amor pela família, Valter conciliou a rotina de pai solo com o sonho de empreender. Entre responsabilidades, desafios e muitas horas de trabalho, transformou o Pet da Vila em uma referência na região, conquistando a confiança de clientes que reconhecem o carinho e a dedicação presentes em cada atendimento.</p>
+      <p>Sua trajetória chamou a atenção de todo o Brasil e foi destaque em programas de televisão de grande audiência, incluindo participações nos programas do Ratinho e da Sabrina, emocionando milhares de pessoas com sua história de perseverança, amor e superação.</p>
+      <p>Ao longo dos anos, o Pet da Vila se consolidou como um centro de estética animal especializado em banho e tosa, tosa higiênica, hidratação de pelagem, remoção de subpelo, higiene animal e serviço de Táxi Dog, atendendo cães e gatos com cuidado individualizado e atenção aos detalhes.</p>
+      <p>Hoje, Valter continua à frente do Pet da Vila com o mesmo propósito que o motivou desde o início: oferecer um atendimento acolhedor, seguro e de confiança para os pets e seus tutores.</p>
+      <p>Mais do que um pet shop, o Pet da Vila representa uma história real de trabalho, dedicação e amor, construída diariamente com respeito aos animais e compromisso com cada cliente que faz parte dessa trajetória.</p>
       <div class="av-grid">
         <div class="av"><h4>Missão</h4><p>Oferecer serviços de banho e tosa de excelência para cães e gatos, promovendo higiene, saúde, bem-estar e qualidade de vida através de um atendimento humanizado e especializado.</p></div>
         <div class="av"><h4>Visão</h4><p>Ser reconhecido como um dos melhores centros de estética animal da Zona Oeste de São Paulo, destacando-se pela qualidade dos serviços, confiança dos clientes e amor dedicado aos pets.</p></div>
@@ -734,6 +792,7 @@ ul{list-style:none;}
   </div></section>
   
   <section class="sec"><div class="cnt">
+    <!-- Filtros Normais de Serviços -->
     <h2 class="h2" style="margin-bottom:8px">Escolha o Serviço para <span class="hl">Seu Pet</span></h2>
     <p class="sub">Filtre por categoria e agende pelo WhatsApp</p>
     <div class="filter-wrap">
@@ -864,7 +923,7 @@ ul{list-style:none;}
     <p>Cuidados com cães e gatos em São Paulo — dicas do Pet da Vila</p>
   </div></section>
   <section class="sec"><div class="cnt">
-    <span class="eye">Conteúdo sobre pets em SP</span>
+    <span class="eye">Conteúdo sobre pets in SP</span>
     <h2 class="h2">Dicas de <span class="hl">Banho, Tosa e Cuidados</span></h2>
     <p class="sub">Informações úteis para tutores de cães e gatos em São Paulo</p>
     <div class="blog-grid" id="blogGrid"></div>
@@ -936,8 +995,9 @@ ul{list-style:none;}
 <div class="pg" id="pg-taxi-dog">
   <!-- Unificado: Hero + Busca em um único container de vídeo de fundo -->
   <section class="td-hero-video-sec">
-    <video autoplay loop muted playsinline class="td-bg-video">
-      <source src="videios/taxi-dog-video.mp4" type="video/mp4">
+    <!-- Vídeo com ID para controle e detecção de resolução responsiva no Táxi Dog também -->
+    <video autoplay loop muted playsinline class="td-bg-video" id="tdVideo">
+      <source id="tdSource" src="videios/taxi-dog-video.mp4" type="video/mp4">
     </video>
     <div class="td-video-overlay"></div>
     
@@ -1017,7 +1077,7 @@ ul{list-style:none;}
   <section class="sec"><div class="cnt">
     <span class="eye">Nossa localização</span>
     <h2 class="h2" style="margin-bottom:8px">Ponto de <span class="hl">Partida</span></h2>
-    <p class="sub">R. Antônio Ayrosa, 714 — Vila dos Remédios, SP · Raio de até 6km</p>
+    <p class="sub">R. Antônio Ayrosa, 714 — Vila dos Remédios, SP • Raio de até 6km</p>
     <div style="border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1.5px solid var(--gy3);height:380px;position:relative;">
       <div style="position:absolute;top:14px;left:14px;background:#111;color:#fff;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;z-index:10;">📍 <span style="color:var(--or)">Pet da Vila</span> — Vila dos Remédios, SP</div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.042!2d-46.72706!3d-23.51283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef80d7e1ad22f%3A0x7c7e5a7b7e6f5c7d!2sR.+Ant%C3%B4nio+Ayrosa%2C+714+-+Vila+dos+Rem%C3%A9dios%2C+S%C3%A3o+Paulo!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:none;"></iframe>
@@ -1031,7 +1091,7 @@ ul{list-style:none;}
       <h2 class="h2" style="margin-bottom:10px">Não encontrou seu <span class="hl">bairro?</span></h2>
       <p style="color:var(--tx2);font-size:15px;margin-bottom:26px;max-width:480px;margin-left:auto;margin-right:auto">Entre em contato. Dependendo da região, conseguimos verificar a disponibilidade de transporte.</p>
       <button class="bp lg" onclick="wa('Olá! Quero saber se vocês atendem meu bairro com Táxi Dog!')">Consultar Disponibilidade</button>
-      <p style="color:var(--tx3);font-size:13px;margin-top:18px">📞 (11) 96362-3660 · Seg–Sáb: 09h00–18h00</p>
+      <p style="color:var(--tx3);font-size:13px;margin-top:18px">📞 (11) 96362-3660 • Seg–Sáb: 09h00–18h00</p>
     </div>
   </section>
 </div>
@@ -1042,14 +1102,16 @@ ul{list-style:none;}
     <div class="fgrid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
       <div class="fbrand">
         <div class="flogo" style="display: flex; align-items: center; gap: 8px;">
-          <div style="background:var(--or); width:28px; height:28px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:14px;">🐾</div>
+          <!-- pebbles logotype container -->
+          <img src="imagens/logo.png" alt="Pet da Vila" style="height: 32px; width: auto; object-fit: contain; border-radius: 4px; display:none;" onload="this.style.display='block'; document.getElementById('footer-fallback-logo').style.display='none';" onerror="this.style.display='none'; document.getElementById('footer-fallback-logo').style.display='flex';">
+          <div id="footer-fallback-logo" style="background:var(--or); width:28px; height:28px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:14px;">🐾</div>
           PET DA VILA
         </div>
         <p>Cuidado de excelência e carinho para cães e gatos em São Paulo.<br/>Desde 2014 em Vila dos Remédios.</p>
         <a href="https://instagram.com/petdavila2023" target="_blank" class="fsoc" style="margin-top:10px;">📷 @petdavila2023</a>
       </div>
       <div class="fct" style="text-align: right; display:flex; flex-direction:column; justify-content:center;">
-        <p>📍 R. Antônio Ayrosa, 714 · Vila dos Remédios, SP</p>
+        <p>📍 R. Antônio Ayrosa, 714 • Vila dos Remédios, SP</p>
         <p>📞 <a href="tel:11963623660" style="color:var(--or); font-weight:800;">(11) 96362-3660</a></p>
         <table class="ftbl" style="margin-top: 10px; width: 100%; max-width: 250px; margin-left: auto;">
           <tr><td style="text-align:left;">Seg–Sáb</td><td style="color:var(--or);">09:00 – 18:00</td></tr>
@@ -1116,6 +1178,9 @@ function goTo(page,artId){
   // Aplicar estilo inicial de cabeçalho dinâmico para a nova rota
   updateNavbarStyle();
   
+  // Detecção dinâmica de vídeos responsivos mobile/desktop
+  checkAndPlayVideos();
+  
   // Inicialização de páginas específicas
   if(page==='blog' && document.getElementById('blogGrid').children.length===0) renderBlog();
   if(page==='artigo' && artId) renderArt(artId);
@@ -1148,6 +1213,44 @@ function updateNavbarStyle(){
     navBar.classList.add('scrolled');
   }
 }
+
+// === DETECTAR E INJETAR VÍDEOS RESPONSIVOS SEM CONDUZIR DOWNLOAD DUPLO ===
+function checkAndPlayVideos() {
+  const isMobile = window.innerWidth <= 768;
+  
+  // 1. Controle do Vídeo do Hero (Início)
+  const heroVideo = document.getElementById('heroVideo');
+  const heroSource = document.getElementById('heroSource');
+  if (heroVideo && heroSource) {
+    const targetHeroSrc = isMobile ? 'videios/hero-video-mobile.mp4' : 'videios/hero-video.mp4';
+    if (heroSource.getAttribute('src') !== targetHeroSrc) {
+      heroSource.setAttribute('src', targetHeroSrc);
+      heroVideo.load();
+      heroVideo.play().catch(e => console.log('Autoplay do hero foi pausado ou impedido:', e));
+    }
+  }
+
+  // 2. Controle do Vídeo do Táxi Dog (Táxi Dog)
+  const tdVideo = document.getElementById('tdVideo');
+  const tdSource = document.getElementById('tdSource');
+  if (tdVideo && tdSource) {
+    // Opcional: Se futuramente quiser um vídeo mobile diferente para o táxi dog, basta colocar o nome aqui.
+    // Por padrão, manteremos o mesmo vídeo otimizado do táxi dog, mas o sistema está 100% pronto para expansões.
+    const targetTdSrc = 'videios/taxi-dog-video.mp4';
+    if (tdSource.getAttribute('src') !== targetTdSrc) {
+      tdSource.setAttribute('src', targetTdSrc);
+      tdVideo.load();
+      tdVideo.play().catch(e => console.log('Autoplay do táxi dog foi pausado ou impedido:', e));
+    }
+  }
+}
+
+// Garantir que a checagem rode também ao redimensionar a tela
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(checkAndPlayVideos, 250);
+});
 
 // Scroll Event Listener
 window.addEventListener('scroll', updateNavbarStyle);
@@ -1274,7 +1377,7 @@ function buildRevCF(){
   REVS.forEach((r,i)=>{
     const card=document.createElement('div');
     card.className='rev-card';
-    card.innerHTML=`<div class="rev-stars">⭐⭐⭐⭐Base</div><p class="rev-txt">${r.text}</p><div class="rev-auth"><div class="rev-av">${r.name[0]}</div><div><div class="rev-name">${r.name}</div><div class="rev-pet">${r.pet}</div></div></div>`;
+    card.innerHTML=`<div class="rev-stars">⭐⭐⭐⭐⭐</div><p class="rev-txt">${r.text}</p><div class="rev-auth"><div class="rev-av">${r.name[0]}</div><div><div class="rev-name">${r.name}</div><div class="rev-pet">${r.pet}</div></div></div>`;
     card.addEventListener('click',()=>{const d=(i-revCur+REVS.length)%REVS.length;if(d===1)revNext();else if(d===REVS.length-1)revPrev();});
     track.appendChild(card);
     const dot=document.createElement('span');
@@ -1362,7 +1465,7 @@ const ARTS=[
     tag:'Higiene Animal SP',
     ico:'💅',
     title:'Corte de unhas para cães em São Paulo: por que é essencial',
-    desc:'O corte de unhas para cães em São Paulo é um dos aspectos de higiene mais negligenciados pelos tutores, mas tem um impacto profundo na saúde ortopédica e no conforto do animal. Quando as unhas crescem além do limite ideal, elas tocam o chão de forma contínua, forçando o pet a alterar sua postura natural para caminhar, o que pode causar dores articulares severas e desvios posturais a longo prazo. Além disso, unhas muito compridas podem se curvar e penetrar nos coxins (as almofadinhas das patas), gerando ferimentos dolorosos e infecções.',
+    desc:'O corte de unhas para cães em São Paulo é um dos aspectos de higiene mais negligenciados pelos tutores, mas tem um impacto perfeito na saúde ortopédica e no conforto do animal. Quando as unhas crescem além do limite ideal, elas tocam o chão de forma contínua, forçando o pet a alterar sua postura natural para caminhar, o que pode causar dores articulares severas e desvios posturais a longo prazo. Além disso, unhas muito compridas podem se curvar e penetrar nos coxins (as almofadinhas das patas), gerando ferimentos dolorosos e infecções.',
     time:'6 min',
     body:`<p>O **corte de unhas para cães em São Paulo** é um dos aspectos de higiene mais negligenciados pelos tutores, mas tem um impacto profundo na saúde ortopédica e no conforto do animal. Quando as unhas crescem além do limite ideal, elas tocam o chão de forma contínua, forçando o pet a alterar sua postura natural para caminhar, o que pode causar dores articulares severas a longo prazo.</p>
     <p>Além dos desvios posturais, unhas muito compridas podem se curvar e penetrar nos coxins (as almofadinhas das patas), gerando ferimentos inflamados, infecções dolorosas e extrema dificuldade de locomoção. Há também o risco de a unha se prender em tapetes ou pisos e rasgar, causando sangramentos intensos e desespero tanto no pet quanto no tutor.</p>
